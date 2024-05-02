@@ -4,7 +4,7 @@ title: "从容教育"
 excerpt: ""
 header:
   overlay_image: /assets/img/page-header-image-vision10.jpg
-  overlay_filter: rgba(51, 117, 255, 0.5)
+  overlay_filter: rgba(255, 127, 80, 0.4)
 layout: single
 classes: wide
 sidebar:

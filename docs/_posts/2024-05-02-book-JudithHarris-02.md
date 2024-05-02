@@ -1,6 +1,6 @@
 ---
-title: 你学的所有养育方法可能都徒劳无功？
-excerpt: " 父母的教养方式，并非是造成孩子表现好坏的原因，而很可能是对孩子行为表现的回应。这个标题的确有点危言耸听了，不过这不是我的故意标题党，而是有严谨的科学研究的。"
+title: 如果教养没有关系，那么到底是什么决定了孩子的人格？
+excerpt: "孩子的人格的影响因素中，父母教养方式对孩子的影响微乎其微，几乎可以忽略。那么到底是什么决定了孩子的人格呢？"
 header:
   teaser: /assets/img/page-header-image-emotions01-teaser.jpg
   overlay_image: /assets/img/page-header-image-emotions01.jpg # Add image post (optional)
@@ -10,9 +10,9 @@ categories:
   - 经典分享
 tags: 
   - 孩子
-  - 专制型
-  - 放纵型
-  - 权威型
+  - 发展心理学
+  - 发育
+  - 成长
   - 教养方式
   - 戴安娜·鲍姆林德
   - 出生顺序
@@ -23,6 +23,12 @@ tags:
   - 养育方式
   - 朱迪斯·哈里斯
   - 教养的迷思
+  - 远古人类
+  - 罗伯斯山洞实验
+  - 青春期叛逆
+  - 威廉·詹姆士·席德斯
+  - 安娜·弗洛伊德
+  - 同辈群体
 toc: true
 last_modified_at: 2024-05-02T19:25:52-05:00
 ---

@@ -1,6 +1,6 @@
 ---
 title: 你学的所有养育方法可能都徒劳无功？
-excerpt: " 父母的教养方式，并非是造成孩子表现好坏的原因，而很可能是对孩子行为表现的回应。这个标题的确有点危言耸听了，不过这不是我的故意标题党，而是有严谨的科学研究的。"
+excerpt: "父母的教养方式，并非是造成孩子表现好坏的原因，而很可能是对孩子行为表现的回应。这个标题的确有点危言耸听了，不过这不是我的故意标题党，而是有严谨的科学研究的。"
 header:
   teaser: /assets/img/page-header-image-emotions01-teaser.jpg
   overlay_image: /assets/img/page-header-image-emotions01.jpg # Add image post (optional)
