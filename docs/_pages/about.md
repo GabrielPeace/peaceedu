@@ -36,7 +36,7 @@ show_date: false
 
 ## 四、个性化咨询
 
-![个性化咨询](assets/个性化咨询.jpeg)
+![个性化咨询](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/个性化咨询.JPG)
 
 ![评估和方案](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E8%AF%84%E4%BC%B0%E5%92%8C%E6%96%B9%E6%A1%88.JPG)
 
