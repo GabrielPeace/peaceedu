@@ -23,7 +23,7 @@ name                     : "小马哥的从容教育"
 description              : "让父母从容，让孩子自若"
 url                      : "https://www.ewaya.com" # the base hostname & protocol for your site e.g. "https://kewtgh.github.io"
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
-repository               : "GabrielPeace/Peaceedu"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "GabrielPeace/peaceedu"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/img/bio-photo-500x300.png"# path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/img/logo-peaceedu.png"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "小马哥的从容教育"# overrides the website title displayed in the masthead, use " " for no title
@@ -34,7 +34,7 @@ github                   : [metadata]
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : "Peace-edu" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "peace-edu" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -134,9 +134,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url: "https://github.com/GabrielPeace/Peaceedu"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@PeaceeduGreat"
 
 # Site Footer
 footer:
@@ -150,9 +150,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url: "https://github.com/GabrielPeace/Peaceedu"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@PeaceeduGreat"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
