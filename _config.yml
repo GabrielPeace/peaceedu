@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "zh-CN"
 title                    : "小马哥的从容教育"
 title_separator          : "|"
-subtitle                 : "聊山聊水聊世界，悦心悦己悦人间。" # site tagline that appears below site title in masthead
-name                     : "小马哥的从容教育"
-description              : "让父母从容，让孩子自若"
+subtitle                 : "让父母从容，让孩子自若" # site tagline that appears below site title in masthead
+name                     : &name "Gabriel"
+description              : &description "聊山聊水聊世界，悦心悦己悦人间。"
 url                      : "https://www.ewaya.com" # the base hostname & protocol for your site e.g. "https://kewtgh.github.io"
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
 repository               : "GabrielPeace/peaceedu"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -33,10 +33,13 @@ chinese_words_per_minute         : 350
 github                   : [metadata]
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+
   disqus:
     shortname            : "peace-edu" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
@@ -58,12 +61,14 @@ comments:
 reCaptcha:
   siteKey                :
   secret                 :
+
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
+
 search                   : true # true, false (default)
 search_full_content      : false # true, false (default)
-search_provider          : algolia # lunr (default), algolia, google
+search_provider          : algolia # lunr (default), algolia
 algolia:
   files_to_exclude:
     - index.html
@@ -76,17 +81,15 @@ algolia:
   index_name             : PeaceEdu# YOUR_INDEX_NAME
   search_only_api_key    : ac7fe74d374731abbc4467027a38b652 # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : true# true (default), false
-google:
-  search_engine_id       : 8f9d63aadc2c360f0 # YOUR_SEARCH_ENGINE_ID
-  instant_search         :  false # false (default), true
-# SEO Related
-google_site_verification :
-bing_site_verification   : 
-yandex_site_verification : 
-naver_site_verification  :
+  files_to_exclude:
+    - _posts/2017-11-28-post-exclude-search.md
 
-# sitemap
-sitemap: true
+# SEO Related
+google_site_verification : "UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" # Replace this with your ID, or delete
+bing_site_verification   :
+naver_site_verification  :
+yandex_site_verification :
+baidu_site_verification  :
 
 # Social Sharing
 twitter:
@@ -197,11 +200,6 @@ keep_files:
   - .svn
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Liquid
-strict_front_matter: true
-liquid:
-  error_mode: strict
 
 # Conversion
 markdown: kramdown
