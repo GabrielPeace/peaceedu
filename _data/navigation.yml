@@ -1,0 +1,38 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  - title: "Posts"
+    url: /year-archive/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Most Popular"
+    url: /most_popular/
+  # - title: "Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+
+# sidebar navigation list sample
+sidebar-series-edu:
+  - title: "教育观点"
+    children:
+       - title: "一、轻轻家教为什么失败？"
+         url: https://facereader.witbacon.com/docs/%E4%BC%81%E4%B8%9A%E5%89%96%E6%9E%90/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A/EDU-qingqing/
+
+
+sidebar-about:
+  - title: "关于我们："
+    children:
+       - title: "一、概述"
+         url: /about/
+  - title: "文章类别："
+    children:
+       - title: "一、父母成长"
+         url: /categories/#父母成长
+       - title: "二、经典分享"
+         url: /categories/#经典分享
+       - title: "三、热点解读"
+         url: /categories/#热点解读
