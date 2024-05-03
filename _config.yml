@@ -77,8 +77,6 @@ algolia:
     - /docs/_pages/*.html
     - /docs/_drafts/*.md
     - _documents/*.md
-    - _includes/*.html
-    - _sass/
     - /assets/
     - /docs/_drafts/*.md
   application_id         : I8MESIIWRG # YOUR_APPLICATION_ID
