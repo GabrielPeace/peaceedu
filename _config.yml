@@ -118,7 +118,7 @@ analytics:
 author:
   name             : "Gabriel"
   avatar           : "/assets/img/gabriel-photo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "依心依道本自若，不忧不惧自从容。"
+  bio              : "依心依道本自若，不忧不惧自从容"
 #  location         : ""
   email            : "malangwtgh@hotmail.com"
   links:
