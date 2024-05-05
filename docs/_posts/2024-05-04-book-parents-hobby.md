@@ -120,7 +120,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 &emsp;&emsp;那根据这个，我们很容易就能确定我们的孩子正在做的事是不是兴趣。
 
-&emsp;&emsp;下面这张图中，我列出了我们很多孩子会经常参与的事情，或者可能会去上的培训班，大家可以看一下（[点击查看大图](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg)）。
+&emsp;&emsp;下面这张图中，我列出了我们很多孩子会经常参与的事情，或者可能会去上的培训班，大家可以看一下（![点击查看大图](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg))。
 
 <center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="All Kinds of Hobbies" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
@@ -128,15 +128,6 @@ last_modified_at: 2024-05-04T19:25:52-05:00
     color: #999;
     padding: 2px;">All Kinds of Hobbies</div>
 </center>
-
-
-<figure>
-  <a href="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" class="image-popup" title="This is a figure caption.">
-    <img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="this is a placeholder image">
-  </a>
-  <figcaption>This is a figure caption.</figcaption>
-</figure>
-
 &emsp;&emsp;我们随便挑一项，举个例子。
 
 &emsp;&emsp;比如编程，现在很多编程的兴趣班，我们很多家长可能都给孩子报了编程班的课。好，那我们就来看看，到底孩子是不是把编程当作兴趣了呢？
