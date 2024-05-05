@@ -30,6 +30,7 @@ masthead_title           : "小马哥的从容教育"# overrides the website tit
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 350
 chinese_words_per_minute         : 350
+enable_copy_code_button  : # true, false (default)
 github                   : [metadata]
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -230,13 +231,32 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 10 # amount of posts to show
-# paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# Pagination with jekyll-paginate-v2
+# See https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
+#   for configuration details
+pagination:
+  # Set enabled to true to use paginate v2
+  # enabled: true
+  debug: false
+  collection: 'posts'
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  tag: ''
+  locale: ''
+  trail:
+    before: 2
+    after: 2
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-paginate
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
@@ -247,6 +267,7 @@ plugins:
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-paginate
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
