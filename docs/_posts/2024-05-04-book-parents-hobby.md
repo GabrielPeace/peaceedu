@@ -128,7 +128,14 @@ last_modified_at: 2024-05-04T19:25:52-05:00
     color: #999;
     padding: 2px;">All Kinds of Hobbies</div>
 </center>
-{% raw %}{% include figure popup=true image_path="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="All Kinds of Hobbies" caption="All Kinds of Hobbies" %}{% endraw %}
+
+
+<figure>
+  <a href="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" class="image-popup" title="This is a figure caption.">
+    <img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="this is a placeholder image">
+  </a>
+  <figcaption>This is a figure caption.</figcaption>
+</figure>
 
 &emsp;&emsp;我们随便挑一项，举个例子。
 
