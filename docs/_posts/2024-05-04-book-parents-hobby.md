@@ -128,6 +128,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
     color: #999;
     padding: 2px;">All Kinds of Hobbies</div>
 </center>
+{% raw %}{% include figure popup=true image_path="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="All Kinds of Hobbies" caption="All Kinds of Hobbies" %}{% endraw %}
 
 &emsp;&emsp;我们随便挑一项，举个例子。
 
