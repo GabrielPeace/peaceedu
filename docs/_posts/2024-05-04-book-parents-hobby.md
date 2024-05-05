@@ -119,7 +119,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 ​	那根据这个，我们很容易就能确定我们的孩子正在做的事是不是兴趣。
 
-​	下面这张图中，我列出了我们很多孩子会经常参与的事情，或者可能会去上的培训班，大家可以看一下。
+​	下面这张图中，我列出了我们很多孩子会经常参与的事情，或者可能会去上的培训班，大家可以看一下（[点击查看大图](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg)）。
 
 <center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="All Kinds of Hobbies" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
