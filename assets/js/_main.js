@@ -2,7 +2,8 @@
    jQuery plugin settings and other scripts
    ========================================================================== */
 
-$(document).ready(function () {
+
+$(function () {
   // FitVids init
   $("#main").fitVids();
 
