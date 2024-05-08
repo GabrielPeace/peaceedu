@@ -34,12 +34,14 @@ last_modified_at: 2024-05-08T19:25:52-05:00
 
 &emsp;&emsp;前几天的视频里面我们聊了最近发生的一起惨剧，河北邯郸市的三名初中生杀害了他们的同学。刚好我最近也在读一本类似的书，一本讲述日本家庭教育的社会纪实类的书，名字叫《恶魔之家》。这本书里面讲了三起案件，每一起都极其令人痛心。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%81%B6%E9%AD%94%E4%B9%8B%E5%AE%B6.jpg" alt="Book:恶魔之家" style="zoom:50%;/><br>
+<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%81%B6%E9%AD%94%E4%B9%8B%E5%AE%B6.jpg" alt="Book:恶魔之家" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
+    zoom:50%;
     padding: 2px;">Book:恶魔之家</div>
 </center>
+
 
 &emsp;&emsp;我今天想拿出案例中的第一个故事跟大家分享分享，看看家庭教育中的问题一般都是怎么产生的。
 
