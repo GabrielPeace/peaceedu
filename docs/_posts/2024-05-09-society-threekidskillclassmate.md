@@ -7,7 +7,7 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
   overlay_filter: 0.4
 categories:
-  - 父母成长
+  - 热点解读
 tags: 
   - 孩子
   - 邯郸中学生
