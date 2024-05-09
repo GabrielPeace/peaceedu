@@ -74,12 +74,11 @@ algolia:
   files_to_exclude:
     - index.html
     - index.md
-    - /docs/_pages/*.md
-    - /docs/_pages/*.html
-    - /docs/_drafts/*.md
+    - docs/_pages/*.md
+    - docs/_pages/*.html
+    - docs/_drafts/*.md
     - _documents/*.md
     - /assets/
-    - /docs/_drafts/*.md
   application_id         : I8MESIIWRG # YOUR_APPLICATION_ID
   index_name             : PeaceEdu# YOUR_INDEX_NAME
   search_only_api_key    : ac7fe74d374731abbc4467027a38b652 # YOUR_SEARCH_ONLY_API_KEY
