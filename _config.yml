@@ -74,10 +74,9 @@ algolia:
   files_to_exclude:
     - index.html
     - index.md
-    - docs/_pages/*.md
-    - docs/_pages/*.html
-    - docs/_drafts/*.md
-    - _documents/*.md
+   - /docs/_pages/
+    - /docs/_drafts/
+    - _documents/
     - /assets/
   application_id         : I8MESIIWRG # YOUR_APPLICATION_ID
   index_name             : PeaceEdu# YOUR_INDEX_NAME
