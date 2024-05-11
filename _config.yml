@@ -76,11 +76,9 @@ algolia:
     - index.md
     - /docs/_pages/*.md
     - /docs/_pages/*.html
-    - /docs/_pages/sitemap.md
-    - /docs/_pages/post-archive-feature-rows.html
     - /docs/_drafts/*.md
     - _documents/*.md
-    - /assets/*
+    - /assets/*.*
     - _pages/*.md
     - _pages/*.html
   application_id         : I8MESIIWRG # YOUR_APPLICATION_ID
