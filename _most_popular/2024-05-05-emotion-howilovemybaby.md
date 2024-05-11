@@ -20,7 +20,7 @@ tags:
   - 家庭教育
   - 养育方式
 canonical_url: https://www.ewaya.com/docs/%E7%88%B6%E6%AF%8D%E6%88%90%E9%95%BF/emotion-howilovemybaby/
-toc: true
+toc: false
 last_modified_at: 2024-05-05T19:25:52-05:00
 ---
 
