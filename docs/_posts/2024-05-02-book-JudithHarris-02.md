@@ -29,6 +29,9 @@ tags:
   - 威廉·詹姆士·席德斯
   - 安娜·弗洛伊德
   - 同辈群体
+sidebar:
+  title: "相关系列"
+  nav: sidebar-series-judithharris
 toc: true
 toc_sticky: true
 last_modified_at: 2024-05-02T19:25:52-05:00

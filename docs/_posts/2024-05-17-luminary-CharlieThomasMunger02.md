@@ -24,6 +24,10 @@ tags:
   - 榜样
   - 为人父母
   - Nancy Barry
+  - Charlie Thomas Munger
+sidebar:
+  title: "相关系列"
+  nav: sidebar-series-munger
 toc: true
 toc_sticky: true
 last_modified_at: 2024-05-17T19:25:52-05:00
