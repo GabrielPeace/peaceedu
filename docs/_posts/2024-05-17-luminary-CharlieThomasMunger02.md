@@ -26,7 +26,7 @@ tags:
   - Nancy Barry
 toc: true
 toc_sticky: true
-last_modified_at: 2024-05-15T19:25:52-05:00
+last_modified_at: 2024-05-17T19:25:52-05:00
 ---
 
 &emsp;&emsp;芒格有两段婚姻，第一段婚姻和妻子Nancy Huggins维持了8年，两人生育了3个孩子，老大是个男孩，9岁的时候得白血病去世；老二和老三是两个女孩。
