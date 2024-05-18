@@ -39,7 +39,7 @@ last_modified_at: 2024-05-02T19:25:52-05:00
 
 &emsp;&emsp;上一期我们介绍了朱迪斯•哈里斯的研究对传统家庭教育理念提出的质疑：
 
-![朱迪斯-哈里斯和教养的迷思](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%9C%B1%E8%BF%AA%E6%96%AF-%E5%93%88%E9%87%8C%E6%96%AF%E5%92%8C%E6%95%99%E5%85%BB%E7%9A%84%E8%BF%B7%E6%80%9D.jpg)
+![朱迪斯-哈里斯和教养的迷思](https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%9C%B1%E8%BF%AA%E6%96%AF-%E5%93%88%E9%87%8C%E6%96%AF%E5%92%8C%E6%95%99%E5%85%BB%E7%9A%84%E8%BF%B7%E6%80%9D.jpg)
 
 1. **父母的教养方式，并非是造成孩子表现好坏的原因，而可能是对孩子行为表现的回应。**
 
@@ -67,7 +67,7 @@ last_modified_at: 2024-05-02T19:25:52-05:00
 
 &emsp;&emsp;**所以，我们的祖先可能会通过制造敌人来团结内部。**
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/ancient%20human-1.jpg" alt="Ancient Human" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/ancient%20human-1.jpg" alt="Ancient Human" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -96,7 +96,7 @@ last_modified_at: 2024-05-02T19:25:52-05:00
 
 &emsp;&emsp;再来看看我们的古老祖先。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/ancient%20human-2.jpg" alt="Ancient Human" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/ancient%20human-2.jpg" alt="Ancient Human" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -137,7 +137,7 @@ last_modified_at: 2024-05-02T19:25:52-05:00
 
 &emsp;&emsp;而另外一个案例则讲了一个天才般的人物，威廉·詹姆士·席德斯。他出生于1898年，他的父亲鲍里斯·席德斯是著名的心理学家、精神病学家和教育哲学家，毕业于哈佛大学，获得心理学、医学及哲学领域的学士、硕士和两个博士学位，并且创立了纽约州精神病研究所和 *《异常心理学杂志* 》，还因在催眠和群体心理学的研究而闻名。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/William_James_Sidis_1914.jpg" alt="William_James_Sidis_1914" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/William_James_Sidis_1914.jpg" alt="William_James_Sidis_1914" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

@@ -38,7 +38,7 @@ last_modified_at: 2024-05-14T19:25:52-05:00
 
 &emsp;&emsp;我把对孩子必不可少的家庭环境分为三个层次，可以看下面这张图：
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2%E9%87%91%E5%AD%97%E5%A1%94.jpg" alt="小马哥的从容教育——家庭教育金字塔" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2%E9%87%91%E5%AD%97%E5%A1%94.jpg" alt="小马哥的从容教育——家庭教育金字塔" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

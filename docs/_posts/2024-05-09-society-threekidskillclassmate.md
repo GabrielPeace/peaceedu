@@ -52,7 +52,7 @@ last_modified_at: 2024-05-09T19:25:52-05:00
 
 &emsp;&emsp;有多少人看过《发条橙》这部电影？这是电影大师库布里克的作品，讲述了一个年轻的暴力犯亚历克斯被捕入狱后，改造成一个顺从的模范公民的故事。**电影前半部分很多地方体现了潜伏在年轻人生命中的，那种本能般的疯狂。剧中的亚历克斯这个人虽然是个特例，但是像他这样的一些年轻人，一起去做一些怪异的、疯狂的事，是很多人的经历。**
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%8F%91%E6%9D%A1%E6%A9%99.jpg" alt="电影:《发条橙》" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%8F%91%E6%9D%A1%E6%A9%99.jpg" alt="电影:《发条橙》" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -73,7 +73,7 @@ last_modified_at: 2024-05-09T19:25:52-05:00
 
 &emsp;&emsp;当几个小伙伴聚在一起，大家就可能想找些事做，就会有各种奇怪的点子冒出来。比如电影《伴我同行》，四个少年决定在夏季的一个周末去寻找一位失踪男孩的尸体。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E4%BC%B4%E6%88%91%E5%90%8C%E8%A1%8C.jpg" alt="电影:《伴我同行》" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E4%BC%B4%E6%88%91%E5%90%8C%E8%A1%8C.jpg" alt="电影:《伴我同行》" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

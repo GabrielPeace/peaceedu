@@ -120,9 +120,9 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 &emsp;&emsp;那根据这个，我们很容易就能确定我们的孩子正在做的事是不是兴趣。
 
-&emsp;&emsp;下面这张图中，我列出了我们很多孩子会经常参与的事情，或者可能会去上的培训班，大家可以看一下（[点击查看大图](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg))。
+&emsp;&emsp;下面这张图中，我列出了我们很多孩子会经常参与的事情，或者可能会去上的培训班，大家可以看一下（[点击查看大图](https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg))。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="All Kinds of Hobbies" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%85%B4%E8%B6%A3%E7%B1%BB%E5%88%AB.jpg" alt="All Kinds of Hobbies" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -138,7 +138,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 &emsp;&emsp;第三，孩子是否在不断的追求卓越。假设孩子学的是Python，写了一个打砖块的游戏。老师教的可能是这样的：
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%89%93%E7%A0%96%E5%9D%97-%E5%88%9D%E7%BA%A7%E7%89%88.gif" alt="Breakout Clone" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%89%93%E7%A0%96%E5%9D%97-%E5%88%9D%E7%BA%A7%E7%89%88.gif" alt="Breakout Clone" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -147,7 +147,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 &emsp;&emsp;而一个有卓越追求的孩子，他可能会添加很多新的游戏玩法，可能最后会变成这样的：
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%89%93%E7%A0%96%E5%9D%97-%E9%AB%98%E7%BA%A7%E7%89%88.gif" alt="Advanced Game of Breakout Clone" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%89%93%E7%A0%96%E5%9D%97-%E9%AB%98%E7%BA%A7%E7%89%88.gif" alt="Advanced Game of Breakout Clone" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -244,7 +244,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 &emsp;&emsp;这部分关于影响力的内容，可以参考罗伯特·西奥迪尼在《影响力》中提到的七个影响力原理。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/book-elements-of-influence.jpg" alt="The Book of Elements Of Influence" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/book-elements-of-influence.jpg" alt="The Book of Elements Of Influence" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -307,7 +307,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 &emsp;&emsp;荣誉和归属感对孩子的影响有多大呢？不知道大家有没有看过一部电影《浪潮》。电影讲了德国一所高中的社会学老师文格尔，在为期一周的时间内，给学生们上的关于纳粹独裁的实验性课程。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/movie-%E6%B5%AA%E6%BD%AE.jpg" alt="电影《浪潮》" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/movie-%E6%B5%AA%E6%BD%AE.jpg" alt="电影《浪潮》" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -328,7 +328,7 @@ last_modified_at: 2024-05-04T19:25:52-05:00
 
 &emsp;&emsp;不知道大家是否还记得我讲过的另外一个故事，美国的一位传奇老师，马文·柯林斯。她的学生都是什么样的呢？14岁不会写自己名字，上课拿着铅笔到处戳同学等等，都是一些连贫民区的学校都根本都不收的学生。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E9%A9%AC%E6%96%87%E6%9F%AF%E6%9E%97%E6%96%AF%E7%9A%84%E6%95%99%E8%82%B2%E4%B9%8B%E9%81%93.jpg" alt="《马文·柯林斯的教育之道》" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E9%A9%AC%E6%96%87%E6%9F%AF%E6%9E%97%E6%96%AF%E7%9A%84%E6%95%99%E8%82%B2%E4%B9%8B%E9%81%93.jpg" alt="《马文·柯林斯的教育之道》" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

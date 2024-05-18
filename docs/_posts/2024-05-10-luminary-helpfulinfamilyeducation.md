@@ -38,7 +38,7 @@ last_modified_at: 2024-05-10T19:25:52-05:00
 
 ### 第一、尹建莉女士
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%B0%B9%E5%BB%BA%E8%8E%89.jpg" alt="尹建莉女士和《好妈妈胜过好老师》" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%B0%B9%E5%BB%BA%E8%8E%89.jpg" alt="尹建莉女士和《好妈妈胜过好老师》" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -55,7 +55,7 @@ last_modified_at: 2024-05-10T19:25:52-05:00
 
 ### 第二、泰勒·本-沙哈尔
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%B3%B0%E5%8B%92%C2%B7%E6%9C%AC-%E6%B2%99%E5%93%88%E5%B0%94.jpg" alt="泰勒·本-沙哈尔" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%B3%B0%E5%8B%92%C2%B7%E6%9C%AC-%E6%B2%99%E5%93%88%E5%B0%94.jpg" alt="泰勒·本-沙哈尔" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -70,7 +70,7 @@ last_modified_at: 2024-05-10T19:25:52-05:00
 
 ### 第三、萨尔曼·可汗
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E8%90%A8%E5%B0%94%E6%9B%BC%C2%B7%E5%8F%AF%E6%B1%97.jpg" alt="萨尔曼·可汗和可汗学院" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E8%90%A8%E5%B0%94%E6%9B%BC%C2%B7%E5%8F%AF%E6%B1%97.jpg" alt="萨尔曼·可汗和可汗学院" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -85,7 +85,7 @@ last_modified_at: 2024-05-10T19:25:52-05:00
 
 ### 第四、阿黛尔·法伯和伊莱恩•玛兹丽施
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E9%98%BF%E9%BB%9B%E5%B0%94%E6%B3%95%E4%BC%AF%E5%92%8C%E4%BC%8A%E8%8E%B1%E6%81%A9%E7%8E%9B%E5%85%B9%E4%B8%BD%E6%96%BD-books.jpg" alt="阿黛尔·法伯和伊莱恩•玛兹丽施" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E9%98%BF%E9%BB%9B%E5%B0%94%E6%B3%95%E4%BC%AF%E5%92%8C%E4%BC%8A%E8%8E%B1%E6%81%A9%E7%8E%9B%E5%85%B9%E4%B8%BD%E6%96%BD-books.jpg" alt="阿黛尔·法伯和伊莱恩•玛兹丽施" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -94,7 +94,7 @@ last_modified_at: 2024-05-10T19:25:52-05:00
 
 &emsp;&emsp;他们两位大家可能没听过，但大家一定听过他们那本非常知名的书，《如何说孩子才会听 怎么听孩子才肯说》。本来他们都是学戏剧的，和教育没有多大关系，但后来加入了儿童心理学家Haim Ginott的育儿小组的成员。在Haim Ginott的教育思想基础上，发展出了一系列与儿童沟通的方法。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Haim_Ginott.jpg" alt="儿童心理学家Haim Ginott" style="zoom:60%"/><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/Haim_Ginott.jpg" alt="儿童心理学家Haim Ginott" style="zoom:60%"/><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -108,7 +108,7 @@ last_modified_at: 2024-05-10T19:25:52-05:00
 
 ### 第五、简·尼尔森
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E7%AE%80%E5%B0%BC%E5%B0%94%E6%A3%AE%E5%92%8C%E6%AD%A3%E9%9D%A2%E7%AE%A1%E6%95%99.jpg" alt="简·尼尔森和《正面管教》" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E7%AE%80%E5%B0%BC%E5%B0%94%E6%A3%AE%E5%92%8C%E6%AD%A3%E9%9D%A2%E7%AE%A1%E6%95%99.jpg" alt="简·尼尔森和《正面管教》" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

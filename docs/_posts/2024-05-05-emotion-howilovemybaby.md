@@ -32,7 +32,7 @@ last_modified_at: 2024-05-05T19:25:52-05:00
 
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/karl-fredrickson-GEJxI_QRPwM-unsplash.jpg" alt="Happy Girl" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/karl-fredrickson-GEJxI_QRPwM-unsplash.jpg" alt="Happy Girl" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -47,7 +47,7 @@ last_modified_at: 2024-05-05T19:25:52-05:00
 
 &emsp;&emsp;不过，我从女儿的身上看到的幸福，就像我自己拥有它们一样。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/oksana-zub-vHgQ9wF7RTY-unsplash.jpg" alt="Happy Girl" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/oksana-zub-vHgQ9wF7RTY-unsplash.jpg" alt="Happy Girl" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -66,7 +66,7 @@ last_modified_at: 2024-05-05T19:25:52-05:00
 
 &emsp;&emsp;但我仍想守护她。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/lauren-lulu-taylor-vppMdk_GMo4-unsplash.jpg" alt="Father & Daughter" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/lauren-lulu-taylor-vppMdk_GMo4-unsplash.jpg" alt="Father & Daughter" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

@@ -35,7 +35,7 @@ last_modified_at: 2024-04-25T19:25:52-05:00
 
 &emsp;&emsp;美国知名的心理学家朱迪斯•哈里斯写过一本书，《教养的迷思》，列举了以下一些颠覆你三观的认知。
 
-![朱迪斯-哈里斯和教养的迷思](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%9C%B1%E8%BF%AA%E6%96%AF-%E5%93%88%E9%87%8C%E6%96%AF%E5%92%8C%E6%95%99%E5%85%BB%E7%9A%84%E8%BF%B7%E6%80%9D.jpg)
+![朱迪斯-哈里斯和教养的迷思](https://gcore.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%9C%B1%E8%BF%AA%E6%96%AF-%E5%93%88%E9%87%8C%E6%96%AF%E5%92%8C%E6%95%99%E5%85%BB%E7%9A%84%E8%BF%B7%E6%80%9D.jpg)
 
 ## 父母的教养方式，并非是造成孩子表现好坏的原因，而很可能是对孩子行为表现的回应。
 
@@ -71,7 +71,7 @@ last_modified_at: 2024-04-25T19:25:52-05:00
 
 &emsp;&emsp;后来瑞士的两位研究者塞西尔·厄恩斯特（Cécile Ernst）和朱尔斯·昂斯特（Jules Angst）**整理了1946年到1980年之间所有的关于出生顺序的研究文章，结果发现“出生顺序对人格没有一致性的影响”。**
 
-![Jules Angst-出生顺序](https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Jules%20Angst-%E5%87%BA%E7%94%9F%E9%A1%BA%E5%BA%8F.jpg)
+![Jules Angst-出生顺序](https://gcore.jsdelivr.net/gh/GabrielPeace/img@main/2024/Jules%20Angst-%E5%87%BA%E7%94%9F%E9%A1%BA%E5%BA%8F.jpg)
 
 &emsp;&emsp;这两位后来为了验证结果，又亲自做了一项研究，对苏黎世大学的7582名学生进行了人格测试，测试的人格项目包含十二条：社会性、外向性、攻击性、易激动性、紧张性、神经质、忧郁性、抑制性、冷静、男子气概、支配欲和开朗。
 

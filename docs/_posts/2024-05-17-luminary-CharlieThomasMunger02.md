@@ -45,7 +45,7 @@ last_modified_at: 2024-05-17T19:25:52-05:00
 
 &emsp;&emsp;和第一任妻子Nancy Huggins结婚时，芒格21岁，妻子19岁。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Nancy-Huggins.jpg" alt="Nancy Huggins" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/Nancy-Huggins.jpg" alt="Nancy Huggins" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -54,7 +54,7 @@ last_modified_at: 2024-05-17T19:25:52-05:00
 
 &emsp;&emsp;妻子Nancy Huggins是芒格妹妹玛丽的同学，都就读于斯克利普斯学院。Huggins家经营着一家皮鞋品牌，专为富人服务，所以家境也很好，而且是家中的独生女，活泼漂亮，不过也有些任性骄纵。而芒格当时正在加州理工学院进行气象学培训，两人经玛丽介绍认识了。不久后，二人就结婚了。婚后不到一年，儿子就出生了。同一年，芒格成功被哈佛法学院录取。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Charlie%20munger%20and%20birth%20child.jpg" alt="查理·芒格和孩子" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/Charlie%20munger%20and%20birth%20child.jpg" alt="查理·芒格和孩子" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -89,7 +89,7 @@ last_modified_at: 2024-05-17T19:25:52-05:00
 
 &emsp;&emsp;在最低谷的时候，律师事务所的同事给芒格介绍了他的第二任妻子Nancy Barry。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Nancy-Barry-Munger.jpeg" alt="Nancy Barry Munger" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/Nancy-Barry-Munger.jpeg" alt="Nancy Barry Munger" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -102,7 +102,7 @@ last_modified_at: 2024-05-17T19:25:52-05:00
 
 &emsp;&emsp;不过，好在这份痛苦并没有持续很久。1956年，芒格和Nancy Barry结婚了。一年以后，芒格的前妻Nancy Huggins也和一位放射学的医师结婚了。而且孩子们的继父继母都是非常有教养的人，非常疼爱他们，而且两边的继父继母和数不清的亲戚，让他们很快融入了两个大家庭，也让两个女孩儿倍感温馨。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Charlie%20and%20second%20wife%20Nancy.jpg" alt="芒格和第二任妻子Nancy Barry结婚" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/Charlie%20and%20second%20wife%20Nancy.jpg" alt="芒格和第二任妻子Nancy Barry结婚" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -141,7 +141,7 @@ last_modified_at: 2024-05-17T19:25:52-05:00
 
 &emsp;&emsp;芒格和Nancy结婚后就搬进了Nancy在加利福尼亚大学洛杉矶校区附近的房子里，而且Nancy很快就怀了两人的第一个孩子，小查理·芒格。之后基本上每隔三年生一个，之后又生了两个儿子和一个女儿，组成了一个10人大家庭，年龄最大的孩子和年龄最小的孩子相差20岁。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Charlie%20and%20his%20daughters.jpg" alt="芒格和女儿们" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/Charlie%20and%20his%20daughters.jpg" alt="芒格和女儿们" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -168,7 +168,7 @@ last_modified_at: 2024-05-17T19:25:52-05:00
 
 &emsp;&emsp;芒格和Nancy的八个子女中，有5个进了斯坦福大学。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/Charlie-Munger-Family-1024x436.jpg" alt="芒格的大家庭" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/Charlie-Munger-Family-1024x436.jpg" alt="芒格的大家庭" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -181,7 +181,7 @@ last_modified_at: 2024-05-17T19:25:52-05:00
 
 &emsp;&emsp;我们先来看看之前讲过的家庭教育金字塔：
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2%E9%87%91%E5%AD%97%E5%A1%94.jpg" alt="家庭教育金字塔" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2%E9%87%91%E5%AD%97%E5%A1%94.jpg" alt="家庭教育金字塔" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

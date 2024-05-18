@@ -34,7 +34,7 @@ last_modified_at: 2024-05-08T19:25:52-05:00
 
 &emsp;&emsp;前几天的视频里面我们聊了最近发生的一起惨剧，河北邯郸市的三名初中生杀害了他们的同学。刚好我最近也在读一本类似的书，一本讲述日本家庭教育的社会纪实类的书，名字叫《恶魔之家》。这本书里面讲了三起案件，每一起都极其令人痛心。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%81%B6%E9%AD%94%E4%B9%8B%E5%AE%B6.jpg" alt="Book:恶魔之家" style="zoom:50%"/><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%81%B6%E9%AD%94%E4%B9%8B%E5%AE%B6.jpg" alt="Book:恶魔之家" style="zoom:50%"/><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -161,7 +161,7 @@ last_modified_at: 2024-05-08T19:25:52-05:00
 
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%9B%A0%E7%B4%A0%E6%A1%86%E6%9E%B6.jpg" alt="Factors of Family Education Structure" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%9B%A0%E7%B4%A0%E6%A1%86%E6%9E%B6.jpg" alt="Factors of Family Education Structure" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -190,7 +190,7 @@ last_modified_at: 2024-05-08T19:25:52-05:00
 
 &emsp;&emsp;到这里，我也不知道该说什么了，我女儿也三岁，每天快乐的像个小天使，我很难想象她遭遇这种情境。如果你看过威尔·史密斯主演的电影《当幸福来敲门》，你再看看这个故事中的小男孩，就会发现，当不得不借宿地铁站的洗手间时，威尔·史密斯奋力捂住儿子的耳朵，不让他听到敲门的声音时，他是个多么令人敬佩的父亲。这种爱，一定是源自他的父母。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E4%BB%8E%E4%B8%80%E4%B8%AA%E6%82%B2%E6%83%A8%E7%9A%84%E6%95%85%E4%BA%8B%E7%9C%8B%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.mp4_20240508_213341.293.jpg" alt="电影《当幸福来敲门》" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E4%BB%8E%E4%B8%80%E4%B8%AA%E6%82%B2%E6%83%A8%E7%9A%84%E6%95%85%E4%BA%8B%E7%9C%8B%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.mp4_20240508_213341.293.jpg" alt="电影《当幸福来敲门》" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -199,7 +199,7 @@ last_modified_at: 2024-05-08T19:25:52-05:00
 
 &emsp;&emsp;我希望看我这期节目的每个父母，都能努力给孩子提供一个安全和充满爱的环境，因为你的爱和呵护，会传达给你孩子的孩子，会传达给你孩子的孩子的孩子。这是一个家族最好的传承，也是诸如曾国藩、钱鏐（liú）这样的家教典范留给子孙最宝贵的财富。曾家200年出了240多位有名望的子孙；钱家起自五代十国，到现在历时1000多年，更是名家辈出，比如大家熟知的钱谦益、钱穆、钱伟长、钱学森、钱三强、钱钟书，以及诺贝尔化学奖得主钱永健等等。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E4%B8%AD%E5%9B%BD%E9%92%B1%E5%AE%B6.jpg" alt="名人辈出的钱家" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E4%B8%AD%E5%9B%BD%E9%92%B1%E5%AE%B6.jpg" alt="名人辈出的钱家" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

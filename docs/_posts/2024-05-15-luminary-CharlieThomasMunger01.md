@@ -37,7 +37,7 @@ last_modified_at: 2024-05-15T19:25:52-05:00
 
 ## 关于三个老头儿
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%9D%8E%E5%98%89%E8%AF%9A-%E5%B7%B4%E8%8F%B2%E7%89%B9-%E8%8A%92%E6%A0%BC.png" alt="查理·芒格，沃伦·巴菲特，李嘉诚" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%9D%8E%E5%98%89%E8%AF%9A-%E5%B7%B4%E8%8F%B2%E7%89%B9-%E8%8A%92%E6%A0%BC.png" alt="查理·芒格，沃伦·巴菲特，李嘉诚" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -46,7 +46,7 @@ last_modified_at: 2024-05-15T19:25:52-05:00
 
 &emsp;&emsp;查理·芒格是当今世界我最喜欢的三个老头儿之一，另外两个分别是巴菲特和李嘉诚，不过这两位也年逾耄耋，分别是93岁和95岁。颇有种看着世界上最后一只平塔岛象龟“乔治”慢慢逝去的感觉。
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E5%AD%A4%E7%8B%AC%E4%B9%94%E6%B2%BB-%E5%B9%B3%E5%A1%94%E5%B2%9B%E8%B1%A1%E9%BE%9F.png" alt="平塔岛象龟乔治" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E5%AD%A4%E7%8B%AC%E4%B9%94%E6%B2%BB-%E5%B9%B3%E5%A1%94%E5%B2%9B%E8%B1%A1%E9%BE%9F.png" alt="平塔岛象龟乔治" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -111,7 +111,7 @@ last_modified_at: 2024-05-15T19:25:52-05:00
 
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/GabrielPeace/Img//2024/%E6%9F%A5%E7%90%86%E8%8A%92%E6%A0%BC4-696x980.jpg" alt="查理·芒格" style="zoom:50%" /><br>
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/%E6%9F%A5%E7%90%86%E8%8A%92%E6%A0%BC4-696x980.jpg" alt="查理·芒格" style="zoom:50%" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
