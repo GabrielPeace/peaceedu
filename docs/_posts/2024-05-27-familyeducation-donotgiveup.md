@@ -20,6 +20,7 @@ tags:
   - 母亲
   - 家庭教育
   - 养育方式
+class: wide
 last_modified_at: 2024-05-27T19:25:52-05:00
 ---
 
