@@ -21,13 +21,17 @@ layout: default
     {% endunless %}
 
     {{ content }}
+      
+    {%- assign ai = site.ai | default: "false" -%}      
+    {% if site.ai == true or page.layout == "ai" %}
+      {%- assign ai_provider = site.ai_provider | default: "coze" -%}
+      {%- case ai_provider -%}
+        {%- when "ewaya-ai" -%}
+          {% include_cached ai-provider/ewaya-ai.html %}
+        {%- when "coze" -%}
+          {% include_cached ai-provider/coze.html %}
+      {%- endcase -%}
+    {% endif %}
 
-    {%- assign ai = site.ai | default: "coze" -%}
-    {%- case ai -%}
-      {%- when "ewaya-ai" -%}
-        <div id="chatbox" class="chatbox"></div>
-      {%- when "coze" -%}
-        <div class="chatbox"></div>
-    {%- endcase -%}
   </div>
 </div>

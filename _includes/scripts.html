@@ -18,16 +18,6 @@
   {%- endcase -%}
 {% endif %}
 
-{% if site.ai == true or page.layout == "ai" %}
-  {%- assign ai_provider = site.ai_provider | default: "coze" -%}
-  {%- case ai_provider -%}
-    {%- when "ewaya-ai" -%}
-      {% include_cached ai-provider/ewaya-ai.html %}
-    {%- when "coze" -%}
-      {% include_cached ai-provider/coze.html %}
-  {%- endcase -%}
-{% endif %}
-
 {% include /comments-providers/scripts.html %}
 
 {% if site.after_footer_scripts %}
