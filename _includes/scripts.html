@@ -18,7 +18,7 @@
   {%- endcase -%}
 {% endif %}
 
-{% if site.ai-assistant == true or page.layout == "ai-assistant" %}
+{% if site.ai == true or page.layout == "ai" %}
   {%- assign ai_provider = site.ai_provider | default: "coze" -%}
   {%- case ai_provider -%}
     {%- when "ewaya-ai" -%}

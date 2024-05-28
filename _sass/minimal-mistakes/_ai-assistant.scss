@@ -13,7 +13,7 @@
   height: 100%;
 }
 
-  .archive__item {
+.archive__item {
     margin-bottom: 2em;
 
     @include breakpoint($large) {
@@ -25,14 +25,13 @@
     }
   }
 
-  .archive__item-title {
+.archive__item-title {
     margin-top: 0;
   }
 
-  .archive__item-excerpt {
+.archive__item-excerpt {
     margin-bottom: 0;
   }
-}
 
 /* Coze ai */
 
