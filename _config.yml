@@ -117,7 +117,7 @@ analytics:
 
 # AI assistant
 ai:
-  provider             : coze # coze, ewaya-ai (default)
+  provider             : "coze" # coze, ewaya-ai (default)
 
 # Site Author
 author:
