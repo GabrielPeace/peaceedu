@@ -22,8 +22,8 @@ layout: default
 
     {{ content }}
 
-    {%- assign ai_assistant = site.ai_assistant | default: "coze" -%}
-    {%- case ai_assistant -%}
+    {%- assign ai = site.ai | default: "coze" -%}
+    {%- case ai -%}
       {%- when "ewaya-ai" -%}
         <div id="chatbox" class="chatbox"></div>
       {%- when "coze" -%}
