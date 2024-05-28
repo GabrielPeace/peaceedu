@@ -13,4 +13,5 @@ sidebar:
 show_date: false
 ---
 
-<iframe width="640" height="360" src="" frameborder="0" ></iframe>
+<iframe width="640" height="360" src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.2/libs/oversea/index.js" frameborder="0" ></iframe>
+
