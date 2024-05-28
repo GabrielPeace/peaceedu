@@ -115,6 +115,8 @@ analytics:
     tracking_id          : G-MJ269XLLJ0
     anonymize_ip         : false # true, false (default)
 
+# AI assistant
+ai                 : true # true, false (default)
 
 # Site Author
 author:
