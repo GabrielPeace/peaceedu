@@ -21,7 +21,10 @@ layout: default
     {% endunless %}
 
     {{ content }}
-      
+  </div>
+    
+
+  <div class="chatbox">      
     {%- assign ai = site.ai | default: "false" -%}      
     {% if site.ai == true or page.layout == "ai" %}
       {%- assign ai_provider = site.ai_provider | default: "coze" -%}
@@ -32,6 +35,6 @@ layout: default
           {% include ai-provider/coze.html %}
       {%- endcase -%}
     {% endif %}
-
   </div>
+    
 </div>
