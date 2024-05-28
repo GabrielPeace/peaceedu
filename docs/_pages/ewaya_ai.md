@@ -8,6 +8,5 @@ layout: single
 classes: wide
 author_profile: true
 show_date: false
+ai: true
 ---
-
-{% include ewaya_ai.html %}

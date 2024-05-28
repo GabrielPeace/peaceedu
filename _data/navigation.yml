@@ -47,3 +47,7 @@ sidebar-about:
          url: /categories/#经典分享
        - title: "三、热点解读"
          url: /categories/#热点解读
+  - title: "AI助手："
+    children:
+       - title: "Ewaya家庭教育AI助理"
+         url: /ewaya_ai/
