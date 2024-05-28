@@ -13,41 +13,9 @@
   height: 100%;
 }
 
-.archive__item {
-    margin-bottom: 2em;
-
-    @include breakpoint($large) {
-      width: 75%;
-    }
-
-    @include breakpoint($x-large) {
-      width: 50%;
-    }
-  }
-
-.archive__item-title {
-    margin-top: 0;
-  }
-
-.archive__item-excerpt {
-    margin-bottom: 0;
-  }
-
 /* Coze ai */
 
 .chat-box {
   max-width: 100% !important;
   margin-bottom: 2em;
-}
-
-.archive__item-title .ais-Highlight {
-  color: $primary-color;
-  font-style: normal;
-  text-decoration: underline;
-}
-
-.archive__item-excerpt .ais-Highlight {
-  color: $primary-color;
-  font-style: normal;
-  font-weight: bold;
 }
