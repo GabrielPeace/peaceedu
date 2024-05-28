@@ -24,4 +24,7 @@ show_date: false
     padding: 2px;">AI painting of a deer</div>
 </center>
 
-{: .text-right}请点击这里——>
+
+{: .text-right}
+
+请点击这里——>
