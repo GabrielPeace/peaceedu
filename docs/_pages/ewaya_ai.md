@@ -13,5 +13,15 @@ sidebar:
 show_date: false
 ---
 
+本站目前只提供文字版AI助理工具，语音版稍后上线。
 
+目前您可以使用文字版助手，请点击右下方小助理打开AI助手。
 
+<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/ai-art-painting-deer-watercolor-trees.jpg" alt="AI painting of a deer" /><br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">AI painting of a deer</div>
+</center>
+
+请点击这里——>{: .text-right}
