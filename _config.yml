@@ -116,8 +116,8 @@ analytics:
     anonymize_ip         : false # true, false (default)
 
 # AI assistant
-# ai                     : true # true, false (default)
-# ai_provider            : "coze" # ewaya-ai,coze (default)
+ai                     : true # true, false (default)
+ai_provider            : "coze" # ewaya-ai,coze (default)
 
 # Site Author
 author:
