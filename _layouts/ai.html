@@ -27,9 +27,9 @@ layout: default
       {%- assign ai_provider = site.ai_provider | default: "coze" -%}
       {%- case ai_provider -%}
         {%- when "ewaya-ai" -%}
-          {% include_cached ai-provider/ewaya-ai.html %}
+          {% include ai-provider/ewaya-ai.html %}
         {%- when "coze" -%}
-          {% include_cached ai-provider/coze.html %}
+          {% include ai-provider/coze.html %}
       {%- endcase -%}
     {% endif %}
 
