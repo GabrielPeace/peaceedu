@@ -5,7 +5,7 @@ header:
   teaser: /assets/img/page-header-image-therapy01-teaser.jpg
   overlay_image: /assets/img/page-header-image-therapy01.jpg # Add image post (optional)
   caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-  overlay_filter: 0.0
+  overlay_filter: 0.4
 categories:
   - 父母成长
 tags: 
@@ -330,3 +330,4 @@ last_modified_at: 2024-06-07T19:25:52-05:00
 ---
 
 &emsp;&emsp;以上便是与孩子接受心理咨询相关的一些内容，希望能帮助到大家，我们下期见。
+
