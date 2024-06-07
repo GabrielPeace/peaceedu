@@ -5,7 +5,7 @@ header:
   teaser: /assets/img/page-header-image-therapy01-teaser.jpg
   overlay_image: /assets/img/page-header-image-therapy01.jpg # Add image post (optional)
   caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-  overlay_filter: 0.4
+  overlay_filter: 0.6
 categories:
   - 父母成长
 tags: 
