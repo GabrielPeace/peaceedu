@@ -16,7 +16,7 @@ show_date: false
 
 # 一、解决方案：
 
-{% include figure popup=true image_path="/assets/img/frontpage.jpg" alt="What we are doing." caption="What we are doing." %}
+{% include figure popup=true image_path="/assets/img/firstpage.jpg" alt="What we are doing." caption="What we are doing." %}
 
 {% include figure popup=true image_path="/assets/img/课程方案.jpg" alt="课程方案" caption="课程方案" %}
 
@@ -46,7 +46,7 @@ show_date: false
 
 {% include figure popup=true image_path="/assets/img/成瘾问题解决.jpg" alt="成瘾问题解决" caption="成瘾问题解决" %}
 
-{% include figure popup=true image_path="/assets/img/Kuder生涯指导.jpg" alt="Kuder生涯指导" caption="Kuder生涯指导" %}
+{% include figure popup=true image_path="/assets/img/Kuder-生涯指导.jpg" alt="Kuder生涯指导" caption="Kuder生涯指导" %}
 
 # 五、其他支持
 
