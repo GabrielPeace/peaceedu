@@ -15,10 +15,10 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3.3'
+          ruby-version: '3.3'
 
       - name: Update RubyGems
-        run: gem update --system 3.2.3
+        run: gem update --system 3.5.17
 
       - name: Algolia Jekyll Action
         uses: dieghernan/algolia-jekyll-action@main
