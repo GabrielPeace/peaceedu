@@ -15,7 +15,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: 3.3
 
       - name: Update RubyGems
         run: gem update --system 3.5.17
