@@ -18,7 +18,7 @@ jobs:
           ruby-version: '3.3'
 
       - name: Update RubyGems
-        run: gem update --system 3.2.3
+        run: gem update --system
 
       - name: Algolia Jekyll Action
         uses: dieghernan/algolia-jekyll-action@main
