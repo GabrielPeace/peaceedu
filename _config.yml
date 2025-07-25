@@ -129,19 +129,19 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "malangwtgh@hotmail.com"
+      url: "malangwtgh@hotmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://www.ewaya.com"
     - label: "X"
-      icon: "fab fa-fw fa-x-square"
+      icon: "fab fa-fw fa-square-x-twitter"
       # url: "https://x.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://www.facebook.com/profile.php?id=100088693703792"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/GabrielPeace/Peaceedu"
+      url: "https://github.com/GabrielPeace/Peaceedu"
     - label: "Youtube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/@PeaceeduGreat"
@@ -150,14 +150,14 @@ author:
 footer:
   links:
     - label: "X"
-      icon: "fab fa-fw fa-x-square"
+      icon: "fab fa-fw fa-square-x-twitter"
       url: "https://x.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/GabrielPeace/Peaceedu"
+      url: "https://github.com/GabrielPeace/Peaceedu"
     - label: "Youtube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/@PeaceeduGreat"
@@ -167,6 +167,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+  since: "2013"
 
 # Reading Files
 include:
