@@ -1,33 +1,46 @@
 {
-  "name": "minimal-mistakes",
+  "name": "peaceedu",
   "private": true,
-  "version": "4.27",
-  "description": "Minimal Mistakes 2 column Jekyll theme.",
+  "version": "4.1.0",
+  "description": "PeaceEdu Jekyll site for calm, practical family education.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmistakes/minimal-mistakes.git"
+    "url": "https://github.com/GabrielPeace/peaceedu.git"
   },
   "keywords": [
     "jekyll",
-    "theme",
-    "minimal"
+    "education",
+    "family-education"
   ],
-  "author": "Michael Rose",
+  "author": "GabrielPeace",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/GabrielPeace/peaceedu/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://www.ewaya.com/",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">=24.0.0 <25"
+  },
+  "dependencies": {
+    "algoliasearch": "^5.55.2",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
     "uglify-js": "^3.17.4"
   },
-"scripts": {
+  "scripts": {
+    "build": "npm run site:build",
     "uglify": "uglifyjs assets/js/vendor/jquery/jquery-3.6.0.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.ba-throttle-debounce.js assets/js/plugins/smooth-scroll.js assets/js/plugins/gumshoe.js assets/js/_main.js -c -m -o assets/js/main.min.js",
     "add-banner": "node banner.js",
-    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
-    "build:js": "npm run uglify && npm run add-banner"
+    "build:js": "npm run uglify && npm run add-banner",
+    "site:build": "bundle exec ruby -EUTF-8 -S jekyll build",
+    "site:serve": "bundle exec ruby -EUTF-8 -S jekyll serve --livereload",
+    "site:links": "node assets/scripts/check-internal-links.mjs",
+    "site:html:audit": "bundle exec ruby scripts/audit_generated_html.rb",
+    "site:check": "npm run build:js && npm run site:build && npm run site:links && npm run site:html:audit",
+    "site:security": "npm audit --omit=dev --audit-level=high",
+    "site:verify": "npm run site:check && npm run site:security",
+    "test": "npm run site:verify",
+    "algolia:push": "node assets/scripts/push-algolia.mjs _site/algolia-records.json"
   }
 }

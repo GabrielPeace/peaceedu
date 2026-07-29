@@ -1,7 +1,14 @@
-{% if site.tag_archive.type and page.tags[0] %}
-  {% include tag-list.html %}
+{% assign locale = include.locale | default: site.locale %}
+{% assign taxonomy_visible = true %}
+{% if site.show_taxonomy == false or page.show_taxonomy == false %}
+  {% assign taxonomy_visible = false %}
 {% endif %}
+{% if taxonomy_visible %}
+  {% if site.tag_archive.type and page.tags[0] %}
+    {% include tag-list.html locale=locale %}
+  {% endif %}
 
-{% if site.category_archive.type and page.categories[0] %}
-  {% include category-list.html %}
+  {% if site.category_archive.type and page.categories[0] %}
+    {% include category-list.html locale=locale %}
+  {% endif %}
 {% endif %}

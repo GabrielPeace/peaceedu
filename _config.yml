@@ -21,17 +21,17 @@ title                    : "小马哥的从容教育"
 title_separator          : "|"
 subtitle                 : "让父母从容，让孩子自若" # site tagline that appears below site title in masthead
 name                     : &name "Gabriel"
-description              : &description "聊山聊水聊世界，悦心悦己悦人间。"
+description              : &description "面向父母的家庭教育文章、沟通方法与成长支持，让父母更从容，让孩子更自若。"
 url                      : "https://www.ewaya.com" # the base hostname & protocol for your site e.g. "https://kewtgh.github.io"
-baseurl                  : ""# the subpath of your site, e.g. "/blog"
-repository               : "GabrielPeace/peaceedu"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/img/bio-photo-500x300.png"# path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/img/logo-peaceedu.png"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "小马哥的从容教育"# overrides the website title displayed in the masthead, use " " for no title
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "GabrielPeace/peaceedu" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : "/assets/img/bio-photo-500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "/assets/img/logo-peaceedu.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "小马哥的从容教育" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 350
 chinese_words_per_minute         : 350
-enable_copy_code_button  : # true, false (default)
+enable_copy_code_button  : true # true, false (default)
 github                   : [metadata]
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -82,9 +82,12 @@ algolia:
     - _pages/*.html
     - _posts/2017-11-28-post-exclude-search.md
   application_id         : I8MESIIWRG # YOUR_APPLICATION_ID
-  index_name             : PeaceEdu# YOUR_INDEX_NAME
+  index_name             : PeaceEdu # YOUR_INDEX_NAME
   search_only_api_key    : ac7fe74d374731abbc4467027a38b652 # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : true# true (default), false
+  minimum_query_length   : 2
+  query_debounce_ms      : 450
+  hits_per_page          : 20
+  powered_by             : true # true (default), false
 
 # SEO Related
 google_site_verification : "" # Replace this with your ID, or delete
@@ -116,8 +119,12 @@ analytics:
     anonymize_ip         : false # true, false (default)
 
 # AI assistant
-ai                     : true # true, false (default)
-ai_provider            : "coze" # ewaya-ai,coze (default)
+ai:
+  enabled              : true
+  provider             : "coze"
+  name                 : "Ewaya 家庭教育 AI 助手"
+  bot_id               : "7383315514610843654"
+  sdk_url              : "https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.4/libs/oversea/index.js"
 
 # Site Author
 author:
@@ -149,12 +156,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "X"
-      icon: "fab fa-fw fa-square-x-twitter"
-      url: "https://x.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/"
+      url: "https://www.facebook.com/profile.php?id=100088693703792"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/GabrielPeace/Peaceedu"
@@ -174,10 +178,10 @@ include:
   - .htaccess
   - _pages
   - /docs
-  - _most_popular
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - "**/*.bak"
   - vendor
   - .asset-cache
   - .bundle
@@ -185,7 +189,9 @@ exclude:
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
+  - assets/js/main.min.js.map
   - assets/js/vendor
+  - assets/scripts
   - Capfile
   - CHANGELOG
   - config
@@ -194,15 +200,34 @@ exclude:
   - gulpfile.js
   - LICENSE
   - log
-  - minimal-mistakes-jekyll.gemspec
+  - peaceedu-jekyll-theme.gemspec
   - node_modules
   - package.json
   - package-lock.json
   - Rakefile
   - README
+  - README.md
+  - scripts
+  - docs/engineering
   - tmp
   - category-tag.zip.bak
   - _config.yml.b
+  # Minimal Mistakes example pages; keep the source files without publishing
+  # them as part of the PeaceEdu site.
+  - docs/_pages/archive-layout-with-content.md
+  - docs/_pages/collection-archive.html
+  - docs/_pages/edge-case.md
+  - docs/_pages/foo-bar.md
+  - docs/_pages/foo.md
+  - docs/_pages/home.md
+  - docs/_pages/markup.md
+  - docs/_pages/page-archive.html
+  - docs/_pages/pets.md
+  - docs/_pages/portfolio-archive.md
+  - docs/_pages/post-archive-feature-rows.html
+  - docs/_pages/recipes-archive.md
+  - docs/_pages/splash-page.md
+  - docs/_pages/splash-page_md
 keep_files:
   - .git
   - .svn
@@ -236,7 +261,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # use the build environment timezone; content dates include explicit offsets
 
 # Pagination with jekyll-paginate
 paginate: 10 # amount of posts to show
@@ -323,7 +348,7 @@ compress_html:
 # Collections
 collections:
     documents:
-      output: true
+      output: false
       permalink: /:collection/:path/
     recipes:
       output: true
@@ -356,7 +381,7 @@ defaults:
   # _documents
   - scope:
       path: "_documents"
-      type: docs
+      type: documents
     values:
       layout: single
       read_time: false

@@ -1,3 +1,5 @@
+@use "support" as *;
+@use "sass:color";
 /* ==========================================================================
    BUTTONS
    ========================================================================== */
@@ -60,7 +62,7 @@
       }
 
       &:hover {
-        @include yiq-contrasted(mix(#000, $color, 20%));
+        @include yiq-contrasted(color.mix(#000, $color, 20%));
       }
     }
   }
@@ -98,4 +100,31 @@
   &--small {
     font-size: $type-size-7;
   }
+}
+
+/* Tags page toggle button */
+.tags-toggle-btn {
+  margin: 1.5rem auto;
+  display: block;
+  font-size: 0.9rem;
+
+  &.btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+.tag-clear-btn {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  border-radius: 999px;   // 胶囊形状
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.tag-clear-btn:hover {
+  background-color: #eaeaea;
+  border-color: #ccc;
+  color: #333;
 }

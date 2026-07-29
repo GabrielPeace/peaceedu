@@ -1,7 +1,58 @@
 ---
 layout: archive
 ---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
 {{ content }}
 
-{% include posts-taxonomy.html taxonomies=site.tags %}
+{% assign sorted_tags = site.tags | sort %}
+
+<section class="tag-directory" data-tag-directory aria-labelledby="tag-directory-title">
+  <h2 id="tag-directory-title">标签目录</h2>
+  <label for="tag-directory-query">搜索标签</label>
+  <input
+    id="tag-directory-query"
+    type="search"
+    autocomplete="off"
+    placeholder="输入标签名称"
+    aria-describedby="tag-directory-status"
+    data-tag-query
+  >
+  <p id="tag-directory-status" role="status" aria-live="polite" aria-atomic="true" data-tag-directory-status></p>
+
+  <div class="tag-directory__items">
+    {% for tag in sorted_tags %}
+      {% assign tag_name = tag[0] %}
+      {% assign tag_posts = tag[1] %}
+      <button
+        type="button"
+        class="tag-directory__item"
+        data-tag="{{ tag_name | escape }}"
+        data-tag-slug="{{ tag_name | slugify | escape }}"
+        data-count="{{ tag_posts | size }}"
+        aria-pressed="false"
+      >
+        <span>{{ tag_name }}</span>
+        <small>{{ tag_posts | size }}</small>
+      </button>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="tag-filter-status" role="status" aria-live="polite" aria-atomic="true">
+  <span>当前标签：<strong data-current-tag>全部</strong></span>
+  <span data-current-tag-count>{{ site.posts | size }} 篇文章</span>
+  <button type="button" class="btn btn--small" data-tag-reset>显示全部</button>
+</div>
+
+<div class="entries-list tag-filter-posts">
+  {% for post in site.posts %}
+    <div class="tag-filter-post" data-post-tags="{{ post.tags | join: '||' | escape }}">
+      {% include archive-single.html locale=locale %}
+    </div>
+  {% endfor %}
+</div>
+
+<p class="tag-filter-empty" data-tag-no-posts hidden>没有找到该标签对应的文章。</p>
+
+<script src="{{ '/assets/js/tag-filter.js' | relative_url }}" defer></script>

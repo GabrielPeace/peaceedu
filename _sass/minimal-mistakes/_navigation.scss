@@ -1,3 +1,5 @@
+@use "support" as *;
+@use "sass:color";
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -68,7 +70,8 @@
     float: inline-start;
     margin-inline-start: -1px;
 
-    a {
+    a,
+    .pagination__item {
       display: block;
       margin-bottom: 0.25em;
       padding: 0.5em 1em;
@@ -79,7 +82,7 @@
       text-align: center;
       text-decoration: none;
       color: $muted-text-color;
-      border: 1px solid mix(#000, $border-color, 25%);
+      border: 1px solid color.mix(#000, $border-color, 25%);
       border-radius: 0;
 
       &:hover {
@@ -102,14 +105,16 @@
     &:first-child {
       margin-inline-start: 0;
 
-      a {
+      a,
+      .pagination__item {
         border-start-start-radius: $border-radius;
         border-end-start-radius: $border-radius;
       }
     }
 
     &:last-child {
-      a {
+      a,
+      .pagination__item {
         border-start-end-radius: $border-radius;
         border-end-end-radius: $border-radius;
       }
@@ -128,7 +133,7 @@
     text-align: center;
     text-decoration: none;
     color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
+    border: 1px solid color.mix(#000, $border-color, 25%);
     border-radius: $border-radius;
 
     &:hover {
@@ -383,7 +388,7 @@
       &:hover {
         color: #fff;
         border-color: $gray;
-        background-color: mix(white, #000, 20%);
+        background-color: color.mix(white, #000, 20%);
 
         &:before,
         &:after {
@@ -395,7 +400,7 @@
     /* selected*/
     input:checked + label {
       color: white;
-      background-color: mix(white, #000, 20%);
+      background-color: color.mix(white, #000, 20%);
 
       &:before,
       &:after {

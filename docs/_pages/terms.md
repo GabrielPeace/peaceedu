@@ -1,56 +1,67 @@
 ---
 permalink: /terms/
-title: "Terms and Privacy Policy"
-last_modified_at: 2017-10-20T12:42:38-04:00
+title: "隐私与使用说明"
+description: "了解 PeaceEdu 使用的第三方服务、可能处理的数据、您的选择，以及本站内容的适用边界。"
+last_modified_at: 2026-07-29T00:00:00+08:00
+layout: single
+author_profile: false
 toc: true
 ---
 
-## Privacy Policy
+本说明适用于 `www.ewaya.com` 上的 PeaceEdu 内容。它说明本站当前使用的服务和用户可以作出的选择，但不替代适用于您所在地的法律意见。
 
-The privacy of my visitors is extremely important. This Privacy Policy outlines the types of personal information that is received and collected and how it is used.
+## 本站直接处理的信息
 
-First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
+PeaceEdu 是静态内容网站，本身不提供账号注册、在线支付或站内预约，也不会要求您提交身份证件、健康档案或未成年人的敏感资料。
 
-### Log Files
+如果您通过电子邮件联系我们，我们会收到您主动提供的邮箱地址和邮件内容，仅用于回复、纠错或处理相关请求。请勿通过普通邮件发送不必要的敏感个人信息。
 
-Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
+## 第三方服务
 
-* Internet Protocol addresses (IP)
-* Types of browser
-* Internet Service Provider (ISP)
-* Date and time stamp
-* Referring and exit pages
-* Number of clicks
+浏览器访问本站时，下列服务可能接收常见的网络与设备信息，例如 IP 地址、浏览器类型、访问时间、来源页面、Cookie 或类似标识符。具体处理方式由相应服务商的政策决定。
 
-All of this information is not linked to anything that is personally identifiable.
+### 基础托管与静态资源
 
-### Cookies and Web Beacons
+本站通过 GitHub Pages 托管，并通过 jsDelivr 等内容分发网络加载字体图标或文章图片。即使不使用互动功能，提供页面所必需的服务器仍会处理网络请求。
 
-When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](http://disqus.com) the next time you leave a comment.
+### 访问统计
 
-Third-party advertisers may also place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
+生产环境使用 Google Analytics 了解页面访问和整体使用趋势。您可以通过浏览器隐私设置、内容拦截工具或 Google 提供的选择控制相关请求。参见 [Google 隐私权政策](https://policies.google.com/privacy)。
 
-If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
+### 站内搜索
 
-#### Google Analytics
+搜索功能优先使用 Algolia。您输入的查询可能发送给 Algolia；如果远程服务不可用，本站会使用随页面发布的本地文章记录完成降级搜索。参见 [Algolia 隐私政策](https://www.algolia.com/policies/privacy/)。
 
-Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. You can read [Google Analytics Privacy Policy](http://www.google.com/analytics/learn/privacy.html).
+### 评论
 
-#### Google Adsense
+部分文章在生产环境提供 Disqus 评论。打开带评论的文章时，Disqus 可能加载脚本、使用 Cookie 并处理登录或评论数据；评论内容属于公开信息，请勿发表个人敏感资料。参见 [Disqus 隐私政策](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy)。
 
-Google Adsense, a third party affiliate marketing network, uses cookies to help make sure I get a commission when you buy a product after clicking on a link or ad banner that takes you to the site of one of their merchants. You can read [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182).
+### AI 助手
 
-## Disclosure Policy
+AI 助手由 Coze 提供，只有在您点击“加载 AI 助手”后才加载。加载后，您输入的文字、设备与网络信息可能由 Coze 处理，并可能跨境存储。不要输入姓名、联系方式、住址、学校、诊断资料、账号密码或其他可识别您或孩子的信息。参见 [Coze 隐私政策](https://www.coze.com/legal/privacy)。
 
-I make money on this website through affiliate programs. If you click an affiliate link or ad banner and buy the product, you help support this website because I'll get a percentage of that sale.
+### 嵌入媒体
 
-Currently I'm an affiliate for Amazon and Google Adsense.
+个别文章包含 YouTube 等第三方媒体。加载或播放媒体时，相应服务商可能接收请求信息并使用自己的存储技术。
 
-What this means for you:
+## Cookie 与您的选择
 
-* I became an affiliate to earn revenue towards the costs of running and maintaining this website. Where I have direct control over which ads are served on this website I offer only products that are directly related to the topic of this website and products that a reader/subscriber would have a genuine interest in or need of.
-* I do not and will not recommend a product just for the sake of making money.
-* I do not let the compensation I receive influence the content, topics, posts, or opinions expressed on this website.
-* I respect and value my readers too much to write anything other than my own genuine and objective opinions and advice.
+您可以在浏览器中阻止或清除 Cookie、限制跨站跟踪，或使用内容拦截工具。这样做可能导致评论、统计、远程搜索、视频或 AI 助手不可用，但核心文章、分类、标签和 RSS 仍可阅读。
 
-Just like this website, my Disclosure Policy is a work in progress. As the revenue streams evolve, so will this page.
+## 未成年人
+
+本站内容面向父母和照护者，不以收集未成年人个人信息为目的。请不要在评论、邮件或 AI 对话中提交可以识别孩子身份的资料。若您认为相关内容意外包含未成年人个人信息，请通过下方邮箱联系我们处理。
+
+## 内容与专业服务边界
+
+本站文章与 AI 输出仅提供一般教育信息和思考方向，不构成医疗、心理、法律或其他专业意见，也不能替代合格专业人员的评估。涉及人身安全、自伤或伤人风险、严重身心症状或其他紧急情况时，请立即联系所在地的紧急服务或具备相应资质的专业机构。
+
+## 著作权、引用与外部链接
+
+除另有说明外，本站原创内容的权利归相应作者所有。合理引用时请注明来源并链接到原文。外部链接仅为提供背景或工具，不代表本站控制或持续认可外部内容；外部页面可能随时发生变化。
+
+## 更新与联系
+
+我们会在服务、数据处理方式或适用要求发生变化时更新本说明，并在页面顶部显示最近修改日期。
+
+如需报告隐私问题、申请更正本站直接持有的信息或反馈内容问题，请联系 [malangwtgh@hotmail.com](mailto:malangwtgh@hotmail.com)。

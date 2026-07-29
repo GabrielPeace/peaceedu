@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /algolia-records.json
+sitemap: false
+---
+[
+  {%- assign first = true -%}
+  {%- for post in site.posts -%}
+    {%- if post.search == false -%}{% continue %}{%- endif -%}
+    {%- unless first -%},{%- endunless -%}
+    {%- assign first = false -%}
+    {
+      "objectID": {{ post.url | absolute_url | jsonify }},
+      "path": {{ post.path | jsonify }},
+      "type": "post",
+      "title": {{ post.title | default: post.url | jsonify }},
+      "description": {{ post.excerpt | default: "" | strip_html | strip_newlines | jsonify }},
+      "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+      "url": {{ post.url | absolute_url | jsonify }},
+      "date": {{ post.date | date_to_xmlschema | jsonify }},
+      "categories": {{ post.categories | default: empty | jsonify }},
+      "tags": {{ post.tags | default: empty | jsonify }},
+      "teaser": {{ post.header.teaser | default: site.teaser | absolute_url | jsonify }}
+    }
+  {%- endfor -%}
+]

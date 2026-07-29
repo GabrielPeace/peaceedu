@@ -1,7 +1,7 @@
 ---
 permalink: /about/
-title: "从容教育"
-excerpt: ""
+title: "关于从容教育"
+excerpt: "从理解自己开始，建立更尊重、更有韧性的亲子关系。"
 header:
   overlay_image: /assets/img/page-header-image-vision10.jpg
   overlay_filter: rgba(255, 127, 80, 0.4)
@@ -14,40 +14,44 @@ author_profile: false
 show_date: false
 ---
 
-# 一、解决方案：
+## 我们相信什么
 
-{% include figure popup=true image_path="/assets/img/firstpage.jpg" alt="What we are doing." caption="What we are doing." %}
+从容教育关注的不只是“怎样让孩子听话”，而是父母和孩子能否在真实生活中彼此理解、共同成长。
 
-{% include figure popup=true image_path="/assets/img/课程方案.jpg" alt="课程方案" caption="课程方案" %}
+父母不需要成为永远正确的人。看见自己的情绪和局限、尊重孩子正在形成的独立人格、愿意在关系受挫后重新连接，本身就是重要的教育。
 
-# 二、初阶课程
+{% include figure popup=true image_path="/assets/img/firstpage.jpg" alt="从容教育关注父母成长、亲子关系与家庭支持" caption="从理解自己开始，与孩子一起成长。" %}
 
-{% include figure popup=true image_path="/assets/img/初阶课程.jpg" alt="初阶课程" caption="初阶课程" %}
+## 这里适合谁
 
-{% include figure popup=true image_path="/assets/img/工作坊-识别爱.jpg" alt="识别爱工作坊" caption="识别爱工作坊" %}
+- 正在为亲子沟通、学习动力、情绪或网络使用问题困扰的父母；
+- 希望减少控制和对抗，建立清晰边界与稳定连接的家庭；
+- 想通过人物、书籍和社会事件拓展教育视角的读者；
+- 愿意先理解问题，再选择适合自己家庭行动方式的人。
 
-{% include figure popup=true image_path="/assets/img/工作坊-表达爱.jpg" alt="表达爱工作坊" caption="表达爱工作坊" %}
+## 你可以怎样使用本站
 
-# 三、高阶课程
+1. **从文章开始**：在[文章列表](/posts/)中了解最近更新。
+2. **按问题寻找**：使用[分类](/categories/)建立主题认识，或在[标签目录](/tags/)定位具体问题。
+3. **带着判断阅读**：结合孩子的年龄、处境和家庭资源，选择可以小步尝试的部分。
+4. **需要时寻求专业支持**：当问题持续影响安全、健康、学习或日常生活时，优先联系具备相应资质的本地专业人员。
 
-{% include figure popup=true image_path="/assets/img/高阶课程.jpg" alt="高阶课程" caption="高阶课程" %}
+## 内容与支持方向
 
-{% include figure popup=true image_path="/assets/img/工作坊-沟通法.jpg" alt="旋转门工作坊" caption="旋转门工作坊" %}
+### 父母成长与亲子沟通
 
-# 四、个性化咨询
+识别情绪与需要，练习更真诚、具体、有边界的表达，让沟通不再只围绕命令、说服和对错。
 
-{% include figure popup=true image_path="/assets/img/个性化咨询.jpg" alt="个性化咨询" caption="个性化咨询" %}
+{% include figure popup=true image_path="/assets/img/课程方案.jpg" alt="从亲子关系、父母成长到个性化支持的内容路径" caption="内容路径会从理解问题逐步走向可执行的改变。" %}
 
-{% include figure popup=true image_path="/assets/img/评估和方案.jpg" alt="评估和方案" caption="评估和方案" %}
+### 经典分享与现实解读
 
-{% include figure popup=true image_path="/assets/img/亲子关系改善.jpg" alt="亲子关系改善" caption="亲子关系改善" %}
+通过教育相关人物、书籍和现实事件，区分事实、观点与可借鉴经验，避免把单一方法当成所有家庭的答案。
 
-{% include figure popup=true image_path="/assets/img/激发动力.jpg" alt="激发动力" caption="激发动力" %}
+### 个性化问题支持
 
-{% include figure popup=true image_path="/assets/img/成瘾问题解决.jpg" alt="成瘾问题解决" caption="成瘾问题解决" %}
+站内文章和 AI 助手只能提供一般信息与思路，不能替代心理、医疗、法律或其他专业服务。涉及人身安全、自伤风险、严重身心症状或危机时，请及时联系所在地的紧急服务或合格专业机构。
 
-{% include figure popup=true image_path="/assets/img/Kuder-生涯指导.jpg" alt="Kuder生涯指导" caption="Kuder生涯指导" %}
+## 联系与反馈
 
-# 五、其他支持
-
-{% include figure popup=true image_path="/assets/img/更多支持.jpg" alt="其他支持" caption="其他支持" %}
+如果你发现文章存在事实错误、失效链接或表达不清，或希望建议新的家庭教育主题，欢迎发送邮件至 [malangwtgh@hotmail.com](mailto:malangwtgh@hotmail.com)。请勿通过普通电子邮件发送敏感健康资料、身份证明或未成年人的隐私信息。

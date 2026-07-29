@@ -3,41 +3,80 @@
    ========================================================================== */
 
 $(document).ready(function () {
+  var pageIsChinese =
+    document.documentElement.lang.toLowerCase().indexOf("zh") === 0;
+
+  function localizedText(zh, en) {
+    return pageIsChinese ? zh : en;
+  }
+
   // FitVids init
   $("#main").fitVids();
 
   // Follow menu drop down
   $(".author__urls-wrapper button").on("click", function () {
-    $(".author__urls").toggleClass("is--visible");
-    $(".author__urls-wrapper").find("button").toggleClass("open");
+    var $button = $(this);
+    var $urls = $button.closest(".author__urls-wrapper").find(".author__urls");
+    var shouldOpen = !$urls.hasClass("is--visible");
+    $urls.toggleClass("is--visible", shouldOpen);
+    $button
+      .toggleClass("open", shouldOpen)
+      .attr("aria-expanded", String(shouldOpen));
   });
+
+  var $searchContent = $(".search-content");
+  var $initialContent = $(".initial-content");
+  var $searchToggle = $(".search__toggle");
+
+  function setSearchVisibility(isVisible) {
+    $searchContent
+      .toggleClass("is--visible", isVisible)
+      .attr("aria-hidden", String(!isVisible))
+      .prop("inert", !isVisible);
+    $initialContent
+      .toggleClass("is--hidden", isVisible)
+      .attr("aria-hidden", String(isVisible))
+      .prop("inert", isVisible);
+    $searchToggle.attr("aria-expanded", String(isVisible));
+    if (isVisible) {
+      document.dispatchEvent(new CustomEvent("peaceedu:search-open"));
+    }
+  }
 
   // Close search screen with Esc key
   $(document).keyup(function (e) {
-    if (e.keyCode === 27) {
-      if ($(".initial-content").hasClass("is--hidden")) {
-        $(".search-content").toggleClass("is--visible");
-        $(".initial-content").toggleClass("is--hidden");
-      }
+    if ((e.key === "Escape" || e.keyCode === 27) && $searchContent.hasClass("is--visible")) {
+      setSearchVisibility(false);
+      $searchToggle.first().trigger("focus");
     }
   });
 
   // Search toggle
-  $(".search__toggle").on("click", function () {
-    $(".search-content").toggleClass("is--visible");
-    $(".initial-content").toggleClass("is--hidden");
-    // set focus on input
+  $searchToggle.on("click", function () {
+    var shouldOpen = !$searchContent.hasClass("is--visible");
+    setSearchVisibility(shouldOpen);
+    if (shouldOpen) {
+      setTimeout(function () {
+        $searchContent.find("input").first().trigger("focus");
+      }, 400);
+    }
+  });
+
+  $(document).on("click", "[data-open-site-search]", function () {
+    setSearchVisibility(true);
+    window.scrollTo({ top: 0, behavior: "auto" });
     setTimeout(function () {
-      $(".search-content input").focus();
+      $searchContent.find("input").first().trigger("focus");
     }, 400);
   });
 
   // Smooth scrolling
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var scroll = new SmoothScroll('a[href*="#"]', {
     offset: 20,
-    speed: 400,
+    speed: reduceMotion ? 0 : 400,
     speedAsDuration: true,
-    durationMax: 500,
+    durationMax: reduceMotion ? 0 : 500,
   });
 
   // Gumshoe scroll spy init
@@ -136,8 +175,10 @@ $(document).ready(function () {
           anchor.className = "header-link";
           anchor.href = "#" + id;
           anchor.innerHTML =
-            '<span class="sr-only">Permalink</span><i class="fas fa-link"></i>';
-          anchor.title = "Permalink";
+            '<span class="sr-only">' +
+            localizedText("本节永久链接", "Permalink to this section") +
+            '</span><i class="fas fa-link" aria-hidden="true"></i>';
+          anchor.title = localizedText("本节永久链接", "Permalink to this section");
           element.appendChild(anchor);
         }
       });
@@ -145,12 +186,11 @@ $(document).ready(function () {
 
   // Add copy button for <pre> blocks
   var copyText = function (text) {
-    if (document.queryCommandEnabled("copy") && navigator.clipboard) {
-      navigator.clipboard.writeText(text).then(
-        () => true,
-        () => console.error("Failed to copy text to clipboard: " + text)
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(
+        function () { return true; },
+        function () { return false; }
       );
-      return true;
     } else {
       var isRTL = document.documentElement.getAttribute("dir") === "rtl";
 
@@ -173,12 +213,12 @@ $(document).ready(function () {
         success = false;
       }
       textarea.parentNode.removeChild(textarea);
-      return success;
+      return Promise.resolve(success);
     }
   };
 
   var copyButtonEventListener = function (event) {
-    var thisButton = event.target;
+    var thisButton = event.currentTarget;
 
     // Locate the <code> element
     var codeBlock = thisButton.nextElementSibling;
@@ -186,9 +226,7 @@ $(document).ready(function () {
       codeBlock = codeBlock.nextElementSibling;
     }
     if (!codeBlock) {
-      // No <code> found - wtf?
-      console.warn(thisButton);
-      throw new Error("No code block found for this button.");
+      return false;
     }
 
     // Skip line numbers if present (i.e. {% highlight lineno %})
@@ -196,21 +234,22 @@ $(document).ready(function () {
     if (realCodeBlock) {
       codeBlock = realCodeBlock;
     }
-    var result = copyText(codeBlock.innerText);
-    // Restore the focus to the button
-    thisButton.focus();
-    if (result) {
-      if (thisButton.interval !== null) {
-        clearInterval(thisButton.interval);
-      }
-      thisButton.classList.add('copied');
+    var status = thisButton.querySelector(".clipboard-copy-status");
+    copyText(codeBlock.innerText).then(function (result) {
+      thisButton.focus();
+      if (thisButton.interval !== null) clearTimeout(thisButton.interval);
+      thisButton.classList.toggle("copied", result);
+      thisButton.classList.toggle("copy-failed", !result);
+      status.textContent = result
+        ? localizedText("已复制", "Copied")
+        : localizedText("复制失败", "Copy failed");
       thisButton.interval = setTimeout(function () {
-        thisButton.classList.remove('copied');
-        clearInterval(thisButton.interval);
+        thisButton.classList.remove("copied", "copy-failed");
+        status.textContent = localizedText("复制代码", "Copy code");
         thisButton.interval = null;
-      }, 1500);
-    }
-    return result;
+      }, 1800);
+    });
+    return true;
   };
 
   if (window.enable_copy_code_button) {
@@ -224,9 +263,17 @@ $(document).ready(function () {
           return;
         }
         var copyButton = document.createElement("button");
-        copyButton.title = "Copy to clipboard";
+        copyButton.title = localizedText("复制到剪贴板", "Copy to clipboard");
+        copyButton.setAttribute(
+          "aria-label",
+          localizedText("复制到剪贴板", "Copy to clipboard")
+        );
         copyButton.className = "clipboard-copy-button";
-        copyButton.innerHTML = '<span class="sr-only">Copy code</span><i class="far fa-fw fa-copy"></i><i class="fas fa-fw fa-check copied"></i>';
+        copyButton.innerHTML =
+          '<span class="clipboard-copy-status sr-only" aria-live="polite">' +
+          localizedText("复制代码", "Copy code") +
+          '</span><i class="far fa-fw fa-copy" aria-hidden="true"></i>' +
+          '<i class="fas fa-fw fa-check copied" aria-hidden="true"></i>';
         copyButton.addEventListener("click", copyButtonEventListener);
         container.prepend(copyButton);
       });

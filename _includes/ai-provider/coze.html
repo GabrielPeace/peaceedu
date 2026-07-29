@@ -1,11 +1,35 @@
-<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.4/libs/oversea/index.js"></script>
-<script>
-    new CozeWebSDK.WebChatClient({
-        config: {
-          bot_id: '7383315514610843654',
-        },
-        componentProps: {
-          title: 'Ewaya.ai',
-        },
-      });
-</script>
+<section
+  class="ai-assistant"
+  data-ai-assistant
+  data-ai-sdk-url="{{ site.ai.sdk_url | escape }}"
+  data-ai-bot-id="{{ site.ai.bot_id | escape }}"
+  data-ai-name="{{ site.ai.name | default: 'Ewaya 家庭教育 AI 助手' | escape }}"
+  aria-labelledby="ai-assistant-title"
+>
+  <div class="ai-assistant__icon" aria-hidden="true">
+    <i class="fas fa-comments"></i>
+  </div>
+  <div class="ai-assistant__body">
+    <h2 id="ai-assistant-title">{{ site.ai.name | default: "Ewaya 家庭教育 AI 助手" }}</h2>
+    <p>助手由 Coze 提供。只有在你点击下方按钮后，浏览器才会加载第三方脚本。</p>
+    <p class="ai-assistant__privacy">
+      请勿输入姓名、联系方式、学校、住址、诊断资料或其他可以识别你或孩子的信息。
+      继续前请阅读<a href="{{ '/terms/#ai-助手' | relative_url }}">隐私与使用说明</a>。
+    </p>
+    <div class="ai-assistant__actions">
+      <button class="btn btn--primary" type="button" data-ai-load>
+        <i class="fas fa-robot" aria-hidden="true"></i>
+        <span>加载 AI 助手</span>
+      </button>
+      <a class="btn" href="{{ '/posts/' | relative_url }}">先浏览文章</a>
+    </div>
+    <p class="ai-assistant__status" role="status" aria-live="polite" aria-atomic="true" data-ai-status>
+      尚未连接第三方服务。
+    </p>
+    <p class="ai-assistant__fallback" data-ai-fallback hidden>
+      暂时无法加载助手。你可以稍后重试，或通过
+      <a href="mailto:{{ site.author.email }}">邮件反馈问题</a>。
+    </p>
+  </div>
+</section>
+<script src="{{ '/assets/js/ai-assistant.js' | relative_url }}?v={{ site.data.theme.version }}" defer></script>

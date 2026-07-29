@@ -1,3 +1,6 @@
+@use "support" as *;
+@use "sass:color";
+@use "sass:selector";
 /* ==========================================================================
    NOTICE TEXT BLOCKS
    ========================================================================== */
@@ -17,7 +20,7 @@
   font-family: $global-font-family;
   font-size: $type-size-6 !important;
   text-indent: initial; /* override*/
-  background-color: mix($background-color, $notice-color, $notice-background-mix);
+  background-color: color.mix($background-color, $notice-color, $notice-background-mix);
   border-radius: $border-radius;
   box-shadow: 0 1px 1px rgba($notice-color, 0.25);
 
@@ -46,19 +49,19 @@
   }
 
   a {
-    color: mix(#000, $notice-color, 10%);
+    color: color.mix(#000, $notice-color, 10%);
 
     &:hover {
-      color: mix(#000, $notice-color, 50%);
+      color: color.mix(#000, $notice-color, 50%);
     }
   }
 
-  @at-root #{selector-unify(&, "blockquote")} {
-    border-inline-start-color: mix(#000, $notice-color, 10%);
+  @at-root #{selector.unify(&, "blockquote")} {
+    border-inline-start-color: color.mix(#000, $notice-color, 10%);
   }
 
   code {
-    background-color: mix($background-color, $notice-color, $code-notice-background-mix)
+    background-color: color.mix($background-color, $notice-color, $code-notice-background-mix)
   }
 
 	pre code {
@@ -74,36 +77,42 @@
 
 /* Default notice */
 
-.notice {
+.notice,
+.markdown-alert {
   @include notice($light-gray);
 }
 
 /* Primary notice */
 
-.notice--primary {
+.notice--primary,
+.markdown-alert-important {
   @include notice($primary-color);
 }
 
 /* Info notice */
 
-.notice--info {
+.notice--info,
+.markdown-alert-note {
   @include notice($info-color);
 }
 
 /* Warning notice */
 
-.notice--warning {
+.notice--warning,
+.markdown-alert-warning {
   @include notice($warning-color);
 }
 
 /* Success notice */
 
-.notice--success {
+.notice--success,
+.markdown-alert-tip {
   @include notice($success-color);
 }
 
 /* Danger notice */
 
-.notice--danger {
+.notice--danger,
+.markdown-alert-caution {
   @include notice($danger-color);
 }

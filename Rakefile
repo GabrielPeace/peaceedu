@@ -7,9 +7,11 @@ require "shellwords"
 require "time"
 require "yaml"
 
-task :default => %i[copyright changelog js version]
+task :default => %i[copyright js version]
 
 package_json = JSON.parse(File.read("package.json"))
+PEACEEDU_VERSION = package_json["version"]
+MINIMAL_MISTAKES_VERSION = "4.28.0"
 
 def listen_ignore_paths(base, options)
   [
@@ -46,7 +48,7 @@ task :preview do
     "destination"   => base.join('test/_site').to_s,
     "force_polling" => false,
     "serving"       => true,
-    "theme"         => "minimal-mistakes-jekyll"
+    "theme"         => "peaceedu-jekyll-theme"
   }
 
   options = Jekyll.configuration(options)
@@ -115,7 +117,8 @@ file "docs/_docs/18-history.md" => "CHANGELOG.md" do |t|
 end
 
 COPYRIGHT_LINES = [
-  "Minimal Mistakes Jekyll Theme #{package_json["version"]} by Michael Rose",
+  "PeaceEdu #{PEACEEDU_VERSION}",
+  "Based on Minimal Mistakes Jekyll Theme #{MINIMAL_MISTAKES_VERSION} by Michael Rose",
   "Copyright 2013-#{Time.now.year} Michael Rose - mademistakes.com | @mmistakes",
   "Free for personal and commercial use under the MIT license",
   "https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE",
@@ -157,7 +160,7 @@ JS_FILES = ["assets/js/vendor/jquery/jquery-3.6.0.js"] + Dir.glob("assets/js/plu
 JS_TARGET = "assets/js/main.min.js"
 task :js => JS_TARGET
 file JS_TARGET => ["_includes/copyright.js"] + JS_FILES do |t|
-  sh Shellwords.join(%w[npx uglifyjs -c --comments /@mmistakes/ --source-map -m -o] +
+  sh Shellwords.join(%w[npx uglifyjs -c --comments /@mmistakes/ -m -o] +
     [t.name] + t.prerequisites)
 end
 
@@ -181,24 +184,21 @@ task :watch_js do
   end
 end
 
-task :version => ["docs/_data/theme.yml", "README.md", "docs/_pages/home.md"]
+task :version => ["_data/theme.yml"]
 
-file "docs/_data/theme.yml" => "package.json" do |t|
-  theme = { "version" => package_json["version"] }
+file "_data/theme.yml" => "package.json" do |t|
+  theme = {
+    "name" => "PeaceEdu",
+    "version" => PEACEEDU_VERSION,
+    "upstream_theme" => {
+      "name" => "Minimal Mistakes",
+      "version" => MINIMAL_MISTAKES_VERSION,
+      "license" => "MIT",
+      "url" => "https://github.com/mmistakes/minimal-mistakes"
+    }
+  }
   File.open(t.name, "w") do |f|
     f.puts "# for use with in-page templates"
     f.puts theme.to_yaml
   end
-end
-
-file "README.md" => "package.json" do |t|
-  content = File.read(t.name)
-  content = content.gsub(/(mmistakes\/minimal-mistakes@)[\d.]+/, '\1' + package_json["version"])
-  File.write(t.name, content)
-end
-
-file "docs/_pages/home.md" => "package.json" do |t|
-  content = File.read(t.name)
-  content = content.gsub(/(\breleases\/tag\/|Latest release v)[\d.]+/, '\1' + package_json["version"])
-  File.write(t.name, content)
 end

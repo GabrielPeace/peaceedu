@@ -54,6 +54,11 @@ $(function() {
 
   var availableSpace, numOfVisibleItems, requiredSpace, timer;
 
+  function closeHiddenLinks() {
+    $hlinks.addClass("hidden").attr("aria-hidden", "true");
+    $btn.removeClass("close").attr("aria-expanded", "false");
+  }
+
   function check() {
 
     winWidth = $( window ).width();
@@ -89,6 +94,7 @@ $(function() {
     $btn.attr("count", numOfItems - numOfVisibleItems);
     if (numOfVisibleItems === numOfItems) {
       $btn.addClass('hidden');
+      closeHiddenLinks();
     } else $btn.removeClass('hidden');
   }
 
@@ -99,24 +105,35 @@ $(function() {
 
   $btn.on('click', function() {
     $hlinks.toggleClass('hidden');
-    $(this).toggleClass('close');
+    var isOpen = !$hlinks.hasClass("hidden");
+    $hlinks.attr("aria-hidden", String(!isOpen));
+    $(this).toggleClass('close', isOpen).attr("aria-expanded", String(isOpen));
     clearTimeout(timer);
+  });
+
+  $(document).on("keydown.greedyNav", function (event) {
+    if (event.key === "Escape" && !$hlinks.hasClass("hidden")) {
+      closeHiddenLinks();
+      $btn.trigger("focus");
+    }
+  }).on("click.greedyNav", function (event) {
+    if (!$(event.target).closest("nav.greedy-nav").length) {
+      closeHiddenLinks();
+    }
   });
 
   $hlinks.on("click", function () {
     // Hide the hidden links & remove the overlay when one is clicked.
-    $hlinks.addClass("hidden");
-    $btn.removeClass("close");
+    closeHiddenLinks();
   }).on('mouseleave', function() {
     // Mouse has left, start the timer
     timer = setTimeout(function() {
-      $hlinks.addClass('hidden');
-      $('.greedy-nav__toggle').removeClass('close');
+      closeHiddenLinks();
     }, closingTime);
   }).on('mouseenter', function() {
     // Mouse is back, cancel the timer
     clearTimeout(timer);
-  })
+  });
 
   // check if page has a logo
   if($logoImg.length !== 0){

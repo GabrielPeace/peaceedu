@@ -1,82 +1,461 @@
-<script>
-// Including InstantSearch.js library and styling
-const loadSearch = function() {
-  const loadCSS = function(src) {
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = src;
-    link.media = 'all';
-    document.head.appendChild(link);
-  };
+{% if include.raw %}
+  var algoliaMinimumQueryLength = {{ site.algolia.minimum_query_length | default: 2 }};
+  var algoliaQueryDebounceMs = {{ site.algolia.query_debounce_ms | default: 450 }};
+  var algoliaHitsPerPage = {{ site.algolia.hits_per_page | default: 20 }};
+  var algoliaInitPromise;
 
-  var script = document.createElement('script');
-  script.setAttribute("type", "text/javascript");
-  script.setAttribute("src", "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js");
-  script.addEventListener("load", function() {
-    // Instantiating InstantSearch.js with Algolia credentials
-    const search = instantsearch({
-      appId: '{{ site.algolia.application_id }}',
-      apiKey: '{{ site.algolia.search_only_api_key }}',
-      indexName: '{{ site.algolia.index_name }}',
-      searchParameters: {
-        restrictSearchableAttributes: ['title', 'content']
+  function loadExternalScript(src) {
+    return new Promise(function (resolve, reject) {
+      var script = document.createElement("script");
+      var timeout = window.setTimeout(function () {
+        script.remove();
+        reject(new Error("External search script timed out"));
+      }, 12000);
+      script.src = src;
+      script.async = true;
+      script.onload = function () {
+        window.clearTimeout(timeout);
+        resolve();
+      };
+      script.onerror = function () {
+        window.clearTimeout(timeout);
+        script.remove();
+        reject(new Error("External search script failed"));
+      };
+      document.body.appendChild(script);
+    });
+  }
+
+  function escapeHTML(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function searchLanguage() {
+    return document.documentElement.lang.toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+  }
+
+  function searchText(key) {
+    var text = {
+      zh: {
+        placeholder: "搜索文章…",
+        inputLabel: "搜索站内文章",
+        submitTitle: "提交搜索",
+        resetTitle: "清除搜索",
+        emptyPrefix: "没有找到「",
+        emptySuffix: "」相关内容",
+        idle: "请输入至少 " + algoliaMinimumQueryLength + " 个字符",
+        loading: "正在加载搜索…",
+        localMode: "远程搜索暂不可用，正在使用站内索引。",
+        unavailable: "搜索暂时不可用，请浏览分类或稍后重试。",
+        resultsPrefix: "找到 ",
+        resultsMiddle: " 条结果，用时 ",
+        resultsSuffix: " 毫秒"
+      },
+      en: {
+        placeholder: "Search articles…",
+        inputLabel: "Search site articles",
+        submitTitle: "Submit search",
+        resetTitle: "Clear search",
+        emptyPrefix: "No results for “",
+        emptySuffix: "”",
+        idle: "Enter at least " + algoliaMinimumQueryLength + " characters",
+        loading: "Loading search…",
+        localMode: "Remote search is unavailable. Using the local site index.",
+        unavailable: "Search is temporarily unavailable. Browse categories or try again later.",
+        resultsPrefix: "",
+        resultsMiddle: " results in ",
+        resultsSuffix: " ms"
       }
+    };
+    var language = searchLanguage();
+    return text[language][key] || text.zh[key] || "";
+  }
+
+  var localSearchRecordsPromise;
+  var algoliaUsingLocalFallback = false;
+
+  function loadLocalSearchRecords() {
+    if (!localSearchRecordsPromise) {
+      localSearchRecordsPromise = fetch(
+        {{ '/algolia-records.json' | relative_url | jsonify }},
+        { credentials: "same-origin" }
+      ).then(function (response) {
+        if (!response.ok) throw new Error("Local search index request failed");
+        return response.json();
+      }).then(function (records) {
+        if (!Array.isArray(records)) throw new Error("Local search index is invalid");
+        return records;
+      }).catch(function (error) {
+        localSearchRecordsPromise = null;
+        throw error;
+      });
+    }
+    return localSearchRecordsPromise;
+  }
+
+  function localResultScore(record, query) {
+    var title = String(record.title || "").toLocaleLowerCase();
+    var tags = Array.isArray(record.tags) ? record.tags.join(" ").toLocaleLowerCase() : "";
+    var categories = Array.isArray(record.categories)
+      ? record.categories.join(" ").toLocaleLowerCase()
+      : "";
+    var description = String(record.description || "").toLocaleLowerCase();
+    var content = String(record.content || "").toLocaleLowerCase();
+    var score = 0;
+    if (title === query) score += 100;
+    if (title.indexOf(query) !== -1) score += 40;
+    if (tags.indexOf(query) !== -1) score += 25;
+    if (categories.indexOf(query) !== -1) score += 20;
+    if (description.indexOf(query) !== -1) score += 10;
+    if (content.indexOf(query) !== -1) score += 1;
+    return score;
+  }
+
+  function localSearchResponse(requests) {
+    var startedAt = performance.now();
+    return loadLocalSearchRecords().then(function (records) {
+      return {
+        results: (requests || []).map(function (request) {
+          var params = request.params || {};
+          var query = String(params.query || "").trim().toLocaleLowerCase();
+          var hitsPerPage = Number(params.hitsPerPage) || algoliaHitsPerPage;
+          var page = Number(params.page) || 0;
+          var matches = records.map(function (record) {
+            return { record: record, score: localResultScore(record, query) };
+          }).filter(function (entry) {
+            return entry.score > 0;
+          }).sort(function (left, right) {
+            return right.score - left.score ||
+              String(right.record.date || "").localeCompare(String(left.record.date || ""));
+          }).map(function (entry) {
+            return entry.record;
+          });
+          var offset = page * hitsPerPage;
+
+          return {
+            hits: matches.slice(offset, offset + hitsPerPage),
+            nbHits: matches.length,
+            page: page,
+            nbPages: Math.ceil(matches.length / hitsPerPage),
+            hitsPerPage: hitsPerPage,
+            processingTimeMS: Math.max(0, Math.round(performance.now() - startedAt)),
+            query: String(params.query || ""),
+            params: ""
+          };
+        })
+      };
+    });
+  }
+
+  function renderLocalHit(hit) {
+    var teaser = hit.teaser || {{ site.teaser | absolute_url | jsonify }};
+    return [
+      "<article class=\"algolia-hit\">",
+      "<a class=\"algolia-hit__link\" href=\"" + escapeHTML(hit.url) + "\">",
+      "<img class=\"algolia-hit__img\" src=\"" + escapeHTML(teaser) +
+        "\" alt=\"\" width=\"160\" height=\"120\" loading=\"lazy\" decoding=\"async\">",
+      "<span class=\"algolia-hit__body\">",
+      "<span class=\"algolia-hit__title\">" + escapeHTML(hit.title) + "</span>",
+      "<span class=\"algolia-hit__description\">" +
+        escapeHTML(hit.description || "") + "</span>",
+      "</span></a></article>"
+    ].join("");
+  }
+
+  function initStandaloneLocalSearch(root) {
+    var searchBox = root.querySelector(".algolia-searchbox");
+    var stats = root.querySelector(".algolia-stats");
+    var hits = root.querySelector(".algolia-hits");
+    var pagination = root.querySelector(".algolia-pagination");
+    if (!searchBox || !stats || !hits) return;
+
+    root.dataset.algoliaInitialized = "local";
+    pagination.innerHTML = "";
+    searchBox.innerHTML = [
+      "<form class=\"local-search\" role=\"search\">",
+      "<label class=\"sr-only\" for=\"local-search-" +
+        document.querySelectorAll(".local-search").length + "\">" +
+        searchText("inputLabel") + "</label>",
+      "<input id=\"local-search-" + document.querySelectorAll(".local-search").length +
+        "\" class=\"search-input\" type=\"search\" autocomplete=\"off\" placeholder=\"" +
+        searchText("placeholder") + "\">",
+      "</form>"
+    ].join("");
+
+    var input = searchBox.querySelector("input");
+    var timer;
+
+    function run() {
+      var query = input.value.trim();
+      if (query.length < algoliaMinimumQueryLength) {
+        stats.textContent = searchText("idle") + " " + searchText("localMode");
+        hits.innerHTML = "";
+        return;
+      }
+
+      stats.textContent = searchText("loading");
+      localSearchResponse([{ params: { query: query, hitsPerPage: algoliaHitsPerPage } }])
+        .then(function (response) {
+          var result = response.results[0];
+          stats.textContent = result.nbHits
+            ? searchText("resultsPrefix") + result.nbHits + searchText("resultsMiddle") +
+              result.processingTimeMS + searchText("resultsSuffix") + " · " +
+              searchText("localMode")
+            : searchText("emptyPrefix") + query + searchText("emptySuffix");
+          hits.innerHTML = result.hits.map(renderLocalHit).join("");
+        }).catch(function () {
+          stats.textContent = searchText("unavailable");
+          hits.innerHTML = "";
+        });
+    }
+
+    searchBox.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      run();
+    });
+    input.addEventListener("input", function () {
+      clearTimeout(timer);
+      timer = setTimeout(run, algoliaQueryDebounceMs);
     });
 
-    const hitTemplate = function(hit) {
-      const url = hit.url;
-      const hightlight = hit._highlightResult;
-      const title = hightlight.title && hightlight.title.value  || "";
-      const content = hightlight.html && hightlight.html.value  || "";
+    var query = new URLSearchParams(location.search).get("q");
+    if (query) {
+      input.value = query;
+      run();
+    } else {
+      stats.textContent = searchText("idle") + " " + searchText("localMode");
+    }
+  }
 
-      return `
-        <div class="list__item">
-          <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-            <h2 class="archive__item-title" itemprop="headline"><a href="{{ site.baseurl }}${url}">${title}</a></h2>
-            <div class="archive__item-excerpt" itemprop="description">${content}</div>
-          </article>
-        </div>
-      `;
+  function refreshSearchLabels(root) {
+    root.querySelectorAll(".ais-SearchBox-input").forEach(function (input) {
+      input.placeholder = searchText("placeholder");
+      input.setAttribute("aria-label", searchText("inputLabel"));
+    });
+    root.querySelectorAll(".ais-SearchBox-submit").forEach(function (button) {
+      button.title = searchText("submitTitle");
+      button.setAttribute("aria-label", searchText("submitTitle"));
+    });
+    root.querySelectorAll(".ais-SearchBox-reset").forEach(function (button) {
+      button.title = searchText("resetTitle");
+      button.setAttribute("aria-label", searchText("resetTitle"));
+    });
+  }
+
+  async function initAlgoliaSearch() {
+    var roots = Array.prototype.slice.call(document.querySelectorAll(".algolia-page"));
+    if (!roots.length) return;
+
+    if (!document.querySelector("link[data-instantsearch-css]")) {
+      var css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = "https://cdn.jsdelivr.net/npm/instantsearch.css@8.18.0/themes/satellite-min.css";
+      css.setAttribute("data-instantsearch-css", "true");
+      document.head.appendChild(css);
     }
 
-    // Adding searchbar and results widgets
-    search.addWidget(
-      instantsearch.widgets.searchBox({
-        container: '.search-searchbar',
-        {% unless site.algolia.powered_by == false %}poweredBy: true,{% endunless %}
-        placeholder: '{{ site.data.ui-text[site.locale].search_placeholder_text | default: "Enter your search term..." }}'
-      })
+    try {
+      if (!window.algoliasearch) {
+        await loadExternalScript("https://cdn.jsdelivr.net/npm/algoliasearch@4.27.0/dist/algoliasearch-lite.umd.js");
+      }
+      if (!window.instantsearch) {
+        await loadExternalScript("https://cdn.jsdelivr.net/npm/instantsearch.js@4.106.0/dist/instantsearch.production.min.js");
+      }
+    } catch (error) {
+      roots.forEach(initStandaloneLocalSearch);
+      return;
+    }
+
+    var rawSearchClient = algoliasearch(
+      {{ site.algolia.application_id | jsonify }},
+      {{ site.algolia.search_only_api_key | jsonify }}
     );
-    search.addWidget(
-      instantsearch.widgets.hits({
-        container: '.search-hits',
-        templates: {
-          item: hitTemplate,
-          empty: '{{ site.data.ui-text[site.locale].search_algolia_no_results | default: "No results" }}',
+    var responseCache = new Map();
+
+    function emptyResult(request) {
+      var params = request && request.params ? request.params : {};
+      return {
+        hits: [],
+        nbHits: 0,
+        page: 0,
+        nbPages: 0,
+        hitsPerPage: Number(params.hitsPerPage) || algoliaHitsPerPage,
+        processingTimeMS: 0,
+        query: String(params.query || ""),
+        params: ""
+      };
+    }
+
+    var searchClient = {
+      search: function (requests) {
+        var normalized = (requests || []).map(function (request) {
+          var params = Object.assign({}, request.params || {});
+          params.query = String(params.query || "").trim();
+          return Object.assign({}, request, { params: params });
+        });
+        var searchable = normalized.some(function (request) {
+          return request.params.query.length >= algoliaMinimumQueryLength;
+        });
+
+        if (!searchable) {
+          return Promise.resolve({ results: normalized.map(emptyResult) });
         }
-      })
-    );
 
-    if (!search.started) {
+        var cacheKey = JSON.stringify(normalized);
+        if (responseCache.has(cacheKey)) return responseCache.get(cacheKey);
+
+        var pending = rawSearchClient.search(normalized).then(function (response) {
+          algoliaUsingLocalFallback = false;
+          return response;
+        }).catch(function (remoteError) {
+          responseCache.delete(cacheKey);
+          algoliaUsingLocalFallback = true;
+          return localSearchResponse(normalized).catch(function () {
+            throw remoteError;
+          });
+        });
+        responseCache.set(cacheKey, pending);
+        if (responseCache.size > 50) {
+          responseCache.delete(responseCache.keys().next().value);
+        }
+        return pending;
+      }
+    };
+
+    roots.forEach(function (root) {
+      if (root.dataset.algoliaInitialized === "true") return;
+
+      var searchBox = root.querySelector(".algolia-searchbox");
+      var stats = root.querySelector(".algolia-stats");
+      var hits = root.querySelector(".algolia-hits");
+      var pagination = root.querySelector(".algolia-pagination");
+      if (!searchBox || !hits) return;
+
+      root.dataset.algoliaInitialized = "true";
+      var search = instantsearch({
+        indexName: {{ site.algolia.index_name | jsonify }},
+        searchClient: searchClient,
+        stalledSearchDelay: 500
+      });
+      var queryTimer;
+      var widgets = [
+        instantsearch.widgets.searchBox({
+          container: searchBox,
+          placeholder: searchText("placeholder"),
+          showReset: true,
+          showSubmit: true,
+          showLoadingIndicator: false,
+          translations: {
+            submitButtonTitle: searchText("submitTitle"),
+            resetButtonTitle: searchText("resetTitle")
+          },
+          queryHook: function (query, refine) {
+            clearTimeout(queryTimer);
+            queryTimer = setTimeout(function () {
+              refine(String(query || "").trim());
+            }, algoliaQueryDebounceMs);
+          }
+        }),
+        instantsearch.widgets.configure({
+          hitsPerPage: algoliaHitsPerPage,
+          attributesToSnippet: ["description:28", "content:32"],
+          snippetEllipsisText: "…"
+        }),
+        instantsearch.widgets.hits({
+          container: hits,
+          templates: {
+            empty: function (data) {
+              if (!data.query || String(data.query).trim().length < algoliaMinimumQueryLength) return "";
+              return "<p class=\"algolia-empty\">" +
+                searchText("emptyPrefix") + escapeHTML(data.query) + searchText("emptySuffix") +
+                "</p>";
+            },
+            item: function (hit) {
+              var title = hit._highlightResult && hit._highlightResult.title
+                ? hit._highlightResult.title.value
+                : escapeHTML(hit.title);
+              var description = hit._snippetResult && hit._snippetResult.description
+                ? hit._snippetResult.description.value
+                : (hit._snippetResult && hit._snippetResult.content
+                  ? hit._snippetResult.content.value
+                  : escapeHTML(hit.description || ""));
+              var teaser = hit.teaser || {{ site.teaser | absolute_url | jsonify }};
+
+              return [
+                "<article class=\"algolia-hit\">",
+                "<a class=\"algolia-hit__link\" href=\"" + escapeHTML(hit.url) + "\">",
+                "<img class=\"algolia-hit__img\" src=\"" + escapeHTML(teaser) + "\" alt=\"\" width=\"160\" height=\"120\" loading=\"lazy\" decoding=\"async\">",
+                "<span class=\"algolia-hit__body\">",
+                "<span class=\"algolia-hit__title\">" + title + "</span>",
+                "<span class=\"algolia-hit__description\">" + description + "</span>",
+                "</span></a></article>"
+              ].join("");
+            }
+          }
+        })
+      ];
+
+      if (stats) {
+        widgets.push(instantsearch.widgets.stats({
+          container: stats,
+          templates: {
+            text: function (data) {
+              if (!data.query) return searchText("idle");
+              var resultText = searchText("resultsPrefix") + data.nbHits +
+                searchText("resultsMiddle") + data.processingTimeMS +
+                searchText("resultsSuffix");
+              return algoliaUsingLocalFallback
+                ? resultText + " · " + searchText("localMode")
+                : resultText;
+            }
+          }
+        }));
+      }
+      if (pagination) {
+        widgets.push(instantsearch.widgets.pagination({
+          container: pagination,
+          padding: 2,
+          showFirst: false,
+          showLast: false
+        }));
+      }
+
+      search.addWidgets(widgets);
       search.start();
+      refreshSearchLabels(root);
+
+      try {
+        var query = new URLSearchParams(location.search).get("q");
+        if (query) {
+          setTimeout(function () {
+            var input = searchBox.querySelector("input[type='search']");
+            if (!input) return;
+            input.value = query;
+            input.dispatchEvent(new Event("input", { bubbles: true }));
+          }, 0);
+        }
+      } catch (error) {}
+    });
+  }
+
+  function startAlgoliaSearch() {
+    if (!algoliaInitPromise) {
+      algoliaInitPromise = initAlgoliaSearch().catch(function (error) {
+        algoliaInitPromise = null;
+        console.error("[InstantSearch] initialization failed:", error);
+      });
     }
+  }
+
+  document.addEventListener("peaceedu:search-open", startAlgoliaSearch);
+  document.addEventListener("DOMContentLoaded", function () {
+    if (document.body.classList.contains("layout--search")) startAlgoliaSearch();
   });
-  document.body.appendChild(script);
-
-  loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css");
-  loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css");
-};
-
-// Starting the search only when toggle is clicked
-$(document).ready(function() {
-  var scriptLoaded = false;
-
-  $(".search__toggle").on("click", function() {
-    if (!scriptLoaded) {
-      loadSearch();
-      scriptLoaded = true;
-    }
-  });
-});
-</script>
+{% else %}
+<script src="{{ '/assets/js/algolia-search.js' | relative_url }}?v={{ site.data.theme.version }}" defer></script>
+{% endif %}

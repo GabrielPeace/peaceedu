@@ -2,15 +2,19 @@
 layout: splash
 permalink: /
 hidden: true
+title: "从容教育"
+description: "从真实的家庭教育问题出发，找到沟通、理解与共同成长的方法。"
 header:
   overlay_image: /assets/img/page-header-image-vision10.jpg
   overlay_filter: rgba(255, 127, 80, 0.4)
   actions:
-    - label: "<i class='fas fa-about'></i> About"
+    - label: "开始阅读"
+      url: "/posts/"
+    - label: "了解从容教育"
       url: "/about/"
 excerpt: >
-  让父母从容，让孩子自若。<br /><br />依心依道本自若，不忧不惧自从容 <br />
-  <small><a href="https://www.ewaya.com/categories/">查看文章</a></small>
+  让父母从容，让孩子自若。<br />
+  从理解自己开始，和孩子一起成长。
 feature_row:
   - image_path: /assets/img/sidebar-image-family-500x300.jpg
     alt: "父母成长"
@@ -18,21 +22,62 @@ feature_row:
     excerpt: "给父母提供有价值的自我成长课程和内容。"
     url: "/categories/#父母成长"
     btn_class: "btn--primary"
-    btn_label: "Learn more"
+    btn_label: "浏览主题"
   - image_path: /assets/img/sidebar-image-child1-500x300.jpg
     alt: "经典分享"
     title: "经典分享"
     excerpt: "分享教育相关的名人事迹，共读有意义的教育书籍，阅览教育相关的影视内容。"
     url: "/categories/#经典分享"
     btn_class: "btn--primary"
-    btn_label: "Learn more"
+    btn_label: "浏览主题"
   - image_path: /assets/img/sidebar-image-crowd1-500x300.jpg
     alt: "热点解读"
     title: "热点解读"
     excerpt: "分析热点教育相关的事件，吸取经验，积极成长。"
     url: "/categories/#热点解读"
     btn_class: "btn--primary"
-    btn_label: "Learn more"      
+    btn_label: "浏览主题"
 ---
 
+<section class="home-start" aria-labelledby="home-start-title">
+  <p class="home-eyebrow">从哪里开始</p>
+  <h2 id="home-start-title">先找到你此刻最关心的问题</h2>
+  <p>这里不提供一套要求所有家庭照做的标准答案。你可以从父母自身成长、经典教育经验或现实事件切入，再回到自己的家庭情境中判断和行动。</p>
+
+  <ol class="home-steps">
+    <li><strong>看见问题</strong><span>用文章梳理情绪、关系与行为背后的需要。</span></li>
+    <li><strong>形成理解</strong><span>结合研究、人物与真实事件，扩展看待问题的角度。</span></li>
+    <li><strong>尝试行动</strong><span>从一个更尊重彼此的小改变开始，并持续观察。</span></li>
+  </ol>
+</section>
+
 {% include feature_row %}
+
+<section class="home-latest" aria-labelledby="home-latest-title">
+  <div class="home-section-heading">
+    <div>
+      <p class="home-eyebrow">最近更新</p>
+      <h2 id="home-latest-title">最新文章</h2>
+    </div>
+    <a href="{{ '/posts/' | relative_url }}">查看全部文章 <span aria-hidden="true">→</span></a>
+  </div>
+
+  {% assign latest_posts = site.posts | slice: 0, 3 %}
+  <div class="entries-grid">
+    {% for post in latest_posts %}
+      {% include archive-single.html locale=site.locale type="grid" %}
+    {% endfor %}
+  </div>
+</section>
+
+<aside class="home-cta" aria-labelledby="home-cta-title">
+  <div>
+    <p class="home-eyebrow">按你的方式探索</p>
+    <h2 id="home-cta-title">还不确定从哪篇开始？</h2>
+    <p>可以按分类建立完整认识，也可以用标签快速定位具体问题。</p>
+  </div>
+  <div class="home-cta__actions">
+    <a class="btn btn--primary" href="{{ '/categories/' | relative_url }}">按分类浏览</a>
+    <a class="btn" href="{{ '/tags/' | relative_url }}">搜索标签</a>
+  </div>
+</aside>

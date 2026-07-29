@@ -1,53 +1,38 @@
 ---
 layout: default
 ---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale -%}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
+  {% include page__hero.html locale=locale %}
 {% endif %}
 
 <div id="main" role="main">
-  {% include sidebar.html %}
+  <article class="page ai-page" itemscope itemtype="https://schema.org/WebPage">
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">{{ page.title }}</h1>
+        </header>
+      {% endunless %}
 
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-    {% endunless %}
+      <section class="page__content" itemprop="text">
+        {{ content }}
 
-    {{ content }}
-  </div>
-
-<!--
-  <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.2/libs/oversea/index.js"></script>
-  <script>
-      new CozeWebSDK.WebChatClient({
-        config: {
-          bot_id: '7365167149666680838',
-        },
-        componentProps: {
-          title: 'Coze',
-        },
-      });
-  </script>
--->
-
-  <div class="chatbox">      
-    {%- assign ai = site.ai | default: "false" -%}      
-    {% if site.ai == true or page.layout == "ai" %}
-      {%- assign ai_provider = site.ai_provider | default: "coze" -%}
-      {%- case ai_provider -%}
-        {%- when "ewaya-ai" -%}
-          {% include ai-provider/ewaya-ai.html %}
-        {%- when "coze" -%}
-          {% include ai-provider/coze.html %}
-      {%- endcase -%}
-    {% endif %}
-  </div>
-    
+        {% if site.ai.enabled %}
+          {%- assign ai_provider = site.ai.provider | default: "coze" -%}
+          {%- case ai_provider -%}
+            {%- when "ewaya-ai" -%}
+              {% include ai-provider/ewaya-ai.html locale=locale %}
+            {%- when "coze" -%}
+              {% include ai-provider/coze.html locale=locale %}
+            {%- else -%}
+              <p class="notice--warning">AI 助手配置暂不可用，请稍后再试。</p>
+          {%- endcase -%}
+        {% else %}
+          <p class="notice--info">AI 助手正在维护，请先浏览站内文章。</p>
+        {% endif %}
+      </section>
+    </div>
+  </article>
 </div>
