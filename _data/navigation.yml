@@ -10,8 +10,9 @@ main:
     url: /tags/
   - title: "精选"
     url: /most_popular/
-  - title: "AI 助手"
-    url: /ewaya_ai/
+  # Planned replacement: AI 问题 List 与家长 AI 使用指引。
+  # - title: "AI 助手"
+  #   url: /ewaya_ai/
   # - title: "Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
