@@ -41,6 +41,7 @@
     "site:security": "npm audit --omit=dev --audit-level=high",
     "site:verify": "npm run site:check && npm run site:security",
     "test": "npm run site:verify",
-    "algolia:push": "node assets/scripts/push-algolia.mjs _site/algolia-records.json"
+    "algolia:push": "node assets/scripts/push-algolia.mjs _site/algolia-records.json",
+    "algolia:protect": "node assets/scripts/protect-algolia-search-key.mjs"
   }
 }
