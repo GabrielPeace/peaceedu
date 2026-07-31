@@ -785,6 +785,10 @@ body.fr-wide-full .entries-grid .archive__item-teaser img {
 }
 
 @media (max-width: $medium) {
+  .home-topics .home-section-heading {
+    align-items: flex-start;
+  }
+
   .home-page .feature__wrapper,
   .home-page .home-latest .entries-grid {
     grid-template-columns: 1fr;
