@@ -39,8 +39,16 @@
   }
 }
 
-.site-logo img {
-  max-height: 2rem;
+.site-logo {
+  flex: 0 0 auto;
+
+  img {
+    display: block;
+    width: auto;
+    height: 2rem;
+    max-width: 8rem;
+    object-fit: contain;
+  }
 }
 
 .site-title {
