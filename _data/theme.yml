@@ -1,6 +1,6 @@
 # for use with in-page templates
 name: PeaceEdu
-version: 4.1.0
+version: 5.1.0
 upstream_theme:
   name: Minimal Mistakes
   version: 4.28.0
