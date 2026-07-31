@@ -114,5 +114,11 @@ jobs:
           path: _site
 
       - name: Push Algolia records
+        id: algolia-push
         if: env.ALGOLIA_ADMIN_API_KEY != ''
+        continue-on-error: true
         run: npm run algolia:push
+
+      - name: Report Algolia fallback
+        if: steps.algolia-push.outcome == 'failure'
+        run: echo '::warning::Algolia push failed; deployed search will use algolia-records.json as its local fallback.'
