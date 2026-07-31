@@ -570,10 +570,15 @@ body {
 
 .tag-groups {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.tag-group {
+  min-width: 0;
 }
 
 .tag-group-title {
+  margin: 0;
   font-size: 1.2rem;
   border-left: 4px solid $primary-color;
   padding-left: 0.6rem;
@@ -583,6 +588,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.tag-group-list.hidden,
+.tag-group-list[aria-hidden="true"] {
+  display: none;
+  margin-top: 0;
 }
 
 .tag-item {
