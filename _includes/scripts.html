@@ -4,7 +4,7 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% else %}
-  <script src="{{ '/assets/js/main.min.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/main.min.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
@@ -21,7 +21,7 @@
 
 {% include /comments-providers/scripts.html locale=locale %}
 
-<script src="{{ '/assets/js/reader-tools.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/reader-tools.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 
 {% if site.after_footer_scripts %}
   {% for script in site.after_footer_scripts %}
