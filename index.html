@@ -12,8 +12,10 @@ header:
   actions:
     - label: "开始阅读"
       url: "/posts/"
+      class: "btn--hero-primary btn--large"
     - label: "了解从容教育"
       url: "/about/"
+      class: "btn--hero-secondary btn--large"
 excerpt: >
   让父母从容，让孩子自若。<br />
   从理解自己开始，和孩子一起成长。
@@ -42,18 +44,44 @@ feature_row:
 ---
 
 <section class="home-start" aria-labelledby="home-start-title">
-  <p class="home-eyebrow">从哪里开始</p>
-  <h2 id="home-start-title">先找到你此刻最关心的问题</h2>
-  <p>这里不提供一套要求所有家庭照做的标准答案。你可以从父母自身成长、经典教育经验或现实事件切入，再回到自己的家庭情境中判断和行动。</p>
+  <header class="home-start__header">
+    <p class="home-eyebrow">从哪里开始</p>
+    <h2 id="home-start-title">从你此刻面对的真实问题进入</h2>
+    <p>不必先掌握一整套教育方法。选择最接近当前处境的入口，先把问题看清，再决定下一步。</p>
+  </header>
 
-  <ol class="home-steps">
-    <li><strong>看见问题</strong><span>用文章梳理情绪、关系与行为背后的需要。</span></li>
-    <li><strong>形成理解</strong><span>结合研究、人物与真实事件，扩展看待问题的角度。</span></li>
-    <li><strong>尝试行动</strong><span>从一个更尊重彼此的小改变开始，并持续观察。</span></li>
-  </ol>
+  <div class="home-paths">
+    <article class="home-path">
+      <span class="home-path__index">01</span>
+      <h3>家里正陷在情绪和冲突中</h3>
+      <p>当争吵、拒绝或失控反复发生，先理解父母与孩子各自的感受、边界和需要。</p>
+      <a href="{{ '/categories/#父母成长' | relative_url }}">从父母成长开始 <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="home-path">
+      <span class="home-path__index">02</span>
+      <h3>想真正看懂孩子的行为</h3>
+      <p>把行为放回气质、同伴、家庭和成长阶段中观察，减少简单归因与无效对抗。</p>
+      <a href="{{ '/tags/' | relative_url }}">按具体问题查找 <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="home-path">
+      <span class="home-path__index">03</span>
+      <h3>想建立长期的教育判断</h3>
+      <p>借助研究、人物和真实案例拓展视角，逐渐形成适合自己家庭的判断原则。</p>
+      <a href="{{ '/categories/#经典分享' | relative_url }}">阅读经典与案例 <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
 </section>
 
-{% include feature_row %}
+<section class="home-topics" aria-labelledby="home-topics-title">
+  <header class="home-section-heading">
+    <div>
+      <p class="home-eyebrow">按主题继续</p>
+      <h2 id="home-topics-title">三条持续阅读的线索</h2>
+    </div>
+    <p>从自我成长、经典经验和现实事件中，找到与你的家庭最相关的内容。</p>
+  </header>
+  {% include feature_row %}
+</section>
 
 <section class="home-latest" aria-labelledby="home-latest-title">
   <div class="home-section-heading">

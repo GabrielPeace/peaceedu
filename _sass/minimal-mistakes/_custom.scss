@@ -356,19 +356,32 @@ body.mobile-toc-open {
 /* Homepage content paths */
 
 .home-start,
+.home-topics,
 .home-latest,
 .home-cta {
   margin-block: 3rem;
 }
 
 .home-start {
-  width: min(100%, 52rem);
-  margin-inline: auto;
-  text-align: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid $border-color;
+  border-radius: calc(#{$border-radius} * 3);
+  background: linear-gradient(
+    135deg,
+    color.mix($background-color, $primary-color, 97%),
+    color.mix($background-color, #fff, 72%)
+  );
 
-  > p:not(.home-eyebrow) {
+  .home-start__header > p:not(.home-eyebrow) {
+    max-width: 45rem;
+    margin-bottom: 0;
     color: $muted-text-color;
   }
+}
+
+.home-start__header h2 {
+  max-width: 42rem;
+  margin: 0 0 0.65rem;
 }
 
 .home-eyebrow {
@@ -379,49 +392,56 @@ body.mobile-toc-open {
   letter-spacing: 0.08em;
 }
 
-.home-steps {
+.home-paths {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 2rem 0 0;
-  padding: 0;
-  text-align: start;
-  list-style: none;
-  counter-reset: home-step;
+  gap: 1.15rem;
+  margin-top: 1.6rem;
+}
 
-  li {
-    position: relative;
-    padding: 1.1rem;
-    border: 1px solid $border-color;
-    border-radius: calc(#{$border-radius} * 2);
-    background: color.mix($background-color, $primary-color, 97%);
-    counter-increment: home-step;
+.home-path {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 1.15rem;
+  border: 1px solid color.mix($border-color, $primary-color, 75%);
+  border-radius: calc(#{$border-radius} * 2);
+  background: color.change(#fff, $alpha: 0.62);
+  box-shadow: 0 6px 18px color.change($text-color, $alpha: 0.045);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 
-    &::before {
-      content: counter(home-step);
-      display: grid;
-      width: 1.8rem;
-      height: 1.8rem;
-      margin-bottom: 0.75rem;
-      place-items: center;
-      border-radius: 50%;
-      color: $background-color;
-      background: $primary-color;
-      font-size: $type-size-6;
-      font-weight: 700;
-    }
+  &:hover {
+    border-color: color.change($primary-color, $alpha: 0.42);
+    box-shadow: 0 10px 24px color.change($text-color, $alpha: 0.075);
+    transform: translateY(-2px);
   }
 
-  strong,
-  span {
-    display: block;
+  h3 {
+    margin: 0.55rem 0 0.5rem;
+    color: $text-color;
+    font-size: $type-size-4;
   }
 
-  span {
-    margin-top: 0.35rem;
+  p {
+    flex: 1 1 auto;
+    margin: 0 0 1rem;
     color: $muted-text-color;
     font-size: $type-size-6;
   }
+
+  a {
+    align-self: flex-start;
+    font-size: $type-size-6;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.home-path__index {
+  color: $primary-color;
+  font-size: $type-size-6;
+  font-weight: 800;
+  letter-spacing: 0.1em;
 }
 
 .home-section-heading,
@@ -435,6 +455,20 @@ body.mobile-toc-open {
 .home-section-heading h2,
 .home-cta h2 {
   margin: 0;
+}
+
+.home-topics .home-section-heading {
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.home-topics .home-section-heading > p {
+  max-width: 34rem;
+  margin: 0;
+  color: $muted-text-color;
+  font-size: $type-size-6;
 }
 
 .home-cta {
@@ -508,7 +542,7 @@ body.mobile-toc-open {
 }
 
 @media (max-width: $medium) {
-  .home-steps {
+  .home-paths {
     grid-template-columns: 1fr;
   }
 
@@ -599,8 +633,8 @@ body.mobile-toc-open {
 /* Let short full-width collections use the available content measure. */
 body.fr-wide-full .entries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.25rem), 1fr));
+  gap: 1.25rem;
 }
 
 body.fr-wide-full .entries-grid .grid__item {
@@ -609,6 +643,15 @@ body.fr-wide-full .entries-grid .grid__item {
   width: auto;
   min-width: 0;
   margin: 0;
+  padding: 1rem;
+  border: 1px solid $border-color;
+  border-radius: calc(#{$border-radius} * 2);
+  background: color.change(#fff, $alpha: 0.58);
+  box-shadow: 0 6px 18px color.change($text-color, $alpha: 0.045);
+}
+
+body.fr-wide-full .entries-grid .grid__item .archive__item {
+  height: 100%;
 }
 
 body.fr-wide-full .entries-grid .archive__item-teaser img {
@@ -624,9 +667,113 @@ body.fr-wide-full .entries-grid .archive__item-teaser img {
   width: 100%;
 }
 
-.home-page .feature__wrapper,
-.home-page .home-latest {
-  display: flow-root;
+.home-page .page__hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+}
+
+.home-page .page__hero-actions .btn {
+  min-width: 9.5rem;
+  margin: 0;
+  padding: 0.72rem 1.2rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 22px color.change(#000, $alpha: 0.14);
+  text-decoration: none;
+}
+
+.home-page .btn--hero-primary,
+.home-page .btn--hero-primary:visited {
+  border: 1px solid #fff;
+  color: $text-color;
+  background: color.change(#fff, $alpha: 0.96);
+}
+
+.home-page .btn--hero-primary:hover,
+.home-page .btn--hero-primary:focus {
+  color: $primary-color;
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+.home-page .btn--hero-secondary,
+.home-page .btn--hero-secondary:visited {
+  border: 1px solid color.change(#fff, $alpha: 0.82);
+  color: #fff;
+  background: color.change(#fff, $alpha: 0.14);
+  backdrop-filter: blur(6px);
+}
+
+.home-page .btn--hero-secondary:hover,
+.home-page .btn--hero-secondary:focus {
+  color: #fff;
+  background: color.change(#fff, $alpha: 0.25);
+  transform: translateY(-1px);
+}
+
+.home-page .feature__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  border: 0;
+}
+
+.home-page .feature__item {
+  float: none;
+  width: auto;
+  margin: 0;
+}
+
+.home-page .feature__item .archive__item,
+.home-page .feature__item .archive__item-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.home-page .feature__item .archive__item {
+  overflow: hidden;
+  border: 1px solid $border-color;
+  border-radius: calc(#{$border-radius} * 2);
+  background: color.change(#fff, $alpha: 0.58);
+  box-shadow: 0 6px 18px color.change($text-color, $alpha: 0.045);
+}
+
+.home-page .feature__item .archive__item-body {
+  flex: 1 1 auto;
+  padding: 0 1rem 1rem;
+}
+
+.home-page .feature__item .archive__item-body > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.home-page .feature__item .btn {
+  min-width: 8.5rem;
+}
+
+.home-page .home-latest .entries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.home-page .home-latest .grid__item {
+  float: none;
+  clear: none;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid $border-color;
+  border-radius: calc(#{$border-radius} * 2);
+  background: color.change(#fff, $alpha: 0.58);
+  box-shadow: 0 6px 18px color.change($text-color, $alpha: 0.045);
 }
 
 .home-page .feature__item-teaser img,
@@ -635,6 +782,24 @@ body.fr-wide-full .entries-grid .archive__item-teaser img {
   height: auto;
   aspect-ratio: 5 / 3;
   object-fit: cover;
+}
+
+@media (max-width: $medium) {
+  .home-page .feature__wrapper,
+  .home-page .home-latest .entries-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $small) {
+  .home-page .page__hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-page .page__hero-actions .btn {
+    width: 100%;
+  }
 }
 
 /* Single articles: wider FaceReader-style column with reliable images. */
@@ -656,6 +821,22 @@ body.fr-wide-full .entries-grid .archive__item-teaser img {
   text-indent: 0;
 }
 
+.layout--single .page__content > h2 {
+  padding-bottom: 0.35rem;
+  color: color.mix($text-color, $primary-color, 42%);
+  border-bottom: 1px solid color.change($primary-color, $alpha: 0.22);
+}
+
+.layout--single .page__content > h3 {
+  color: color.mix($text-color, $accent-color, 62%);
+}
+
+.layout--single .page__content > h4,
+.layout--single .page__content > h5,
+.layout--single .page__content > h6 {
+  color: color.mix($text-color, $primary-color, 78%);
+}
+
 .page__content img {
   display: block;
   width: auto !important;
@@ -665,7 +846,37 @@ body.fr-wide-full .entries-grid .archive__item-teaser img {
 }
 
 .page__content center img {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.layout--single .page__content center {
+  margin: 1.25rem 0 1.5rem;
+  color: $muted-text-color;
+  font-size: $type-size-7;
+  line-height: 1.45;
+}
+
+.layout--single .page__content center > img {
+  margin-top: 0;
+}
+
+.layout--single .page__content center > br {
+  display: none;
+}
+
+.layout--single .page__content figure {
+  margin-block: 1.25rem 1.5rem;
+}
+
+.layout--single .page__content figure img {
+  margin-bottom: 0.25rem;
+}
+
+.layout--single .page__content figcaption {
+  margin: 0;
+  color: $muted-text-color;
+  font-size: $type-size-7;
+  line-height: 1.45;
 }
 
 /* Accessible, collapsible tag directory. */
@@ -785,41 +996,139 @@ body.fr-wide-full .entries-grid .archive__item-teaser img {
 
 .algolia-searchbox .ais-SearchBox-form {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: block !important;
+  width: 100%;
+  height: 3.25rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.algolia-searchbox .ais-SearchBox-form::before {
+  display: none !important;
+  content: none !important;
+}
+
+.algolia-searchbox .ais-SearchBox,
+.local-search {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .algolia-searchbox .ais-SearchBox-input,
 .local-search .search-input {
   width: 100%;
   min-height: 3.25rem;
-  padding: 0.7rem 5.5rem 0.7rem 1rem;
+  margin: 0;
+  padding: 0.7rem 3.25rem;
   border: 1px solid $border-color;
   border-radius: calc(#{$border-radius} * 2);
   color: $text-color;
-  background: $background-color;
+  background: color.change(#fff, $alpha: 0.72);
   box-shadow: none;
+}
+
+.algolia-searchbox .ais-SearchBox-input:focus,
+.local-search .search-input:focus {
+  border-color: color.change($primary-color, $alpha: 0.62);
+  background: #fff;
+  box-shadow: 0 0 0 4px color.change($primary-color, $alpha: 0.12);
 }
 
 .algolia-searchbox .ais-SearchBox-submit,
 .algolia-searchbox .ais-SearchBox-reset {
+  appearance: none;
   position: absolute;
   top: 50%;
   width: 2.25rem;
   height: 2.25rem;
-  padding: 0.55rem;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  place-items: center;
   border: 0;
   color: $primary-color;
   background: transparent;
   transform: translateY(-50%);
+  z-index: 2;
+}
+
+.algolia-searchbox .ais-SearchBox-submit svg,
+.algolia-searchbox .ais-SearchBox-reset svg,
+.algolia-searchbox .ais-SearchBox-submitIcon,
+.algolia-searchbox .ais-SearchBox-resetIcon {
+  display: none !important;
 }
 
 .algolia-searchbox .ais-SearchBox-submit {
-  inset-inline-end: 2.65rem;
+  inset-inline-start: 0.45rem;
+}
+
+.algolia-searchbox .ais-SearchBox-submit::before {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid $primary-color;
+  border-radius: 50%;
+}
+
+.algolia-searchbox .ais-SearchBox-submit::after {
+  position: absolute;
+  width: 0.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: $primary-color;
+  content: "";
+  transform: translate(0.45rem, 0.45rem) rotate(45deg);
 }
 
 .algolia-searchbox .ais-SearchBox-reset {
-  inset-inline-end: 0.4rem;
+  inset-inline-end: 0.45rem;
+  border-radius: 50%;
+  background: color.change($text-color, $alpha: 0.07);
+}
+
+.algolia-searchbox .ais-SearchBox-reset[hidden] {
+  display: none !important;
+}
+
+.algolia-searchbox .ais-SearchBox-reset::before,
+.algolia-searchbox .ais-SearchBox-reset::after {
+  position: absolute;
+  width: 0.75rem;
+  height: 2px;
+  border-radius: 2px;
+  background: $muted-text-color;
+  content: "";
+}
+
+.algolia-searchbox .ais-SearchBox-reset::before {
+  transform: rotate(45deg);
+}
+
+.algolia-searchbox .ais-SearchBox-reset::after {
+  transform: rotate(-45deg);
+}
+
+.search__toggle {
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  place-items: center;
+  line-height: 1;
+}
+
+.search__toggle .fa-search {
+  width: auto;
+  height: auto;
+  line-height: 1;
 }
 
 .algolia-hits .ais-Hits-list,
