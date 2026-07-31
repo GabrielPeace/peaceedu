@@ -81,9 +81,9 @@ algolia:
     - _pages/*.md
     - _pages/*.html
     - _posts/2017-11-28-post-exclude-search.md
-  application_id         : I8MESIIWRG # YOUR_APPLICATION_ID
+  application_id         : HT0DEXOKEY # YOUR_APPLICATION_ID
   index_name             : PeaceEdu # YOUR_INDEX_NAME
-  search_only_api_key    : ac7fe74d374731abbc4467027a38b652 # YOUR_SEARCH_ONLY_API_KEY
+  # search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   minimum_query_length   : 2
   query_debounce_ms      : 450
   hits_per_page          : 20
