@@ -525,6 +525,345 @@ body.mobile-toc-open {
   }
 }
 
+/* PeaceEdu content widths, adapted from FaceReader without its color theme. */
+:root {
+  --peaceedu-sidebar-width: 200px;
+  --peaceedu-content-gap: 3rem;
+}
+
+@include breakpoint($x-large) {
+  :root {
+    --peaceedu-sidebar-width: 240px;
+    --peaceedu-content-gap: 3.25rem;
+  }
+}
+
+@include breakpoint($large) {
+  body.fr-wide-sidebar #main,
+  body.layout--single #main {
+    display: grid;
+    grid-template-columns: var(--peaceedu-sidebar-width) minmax(0, 1fr);
+    column-gap: var(--peaceedu-content-gap);
+    align-items: start;
+  }
+
+  body.fr-wide-sidebar #main::before,
+  body.fr-wide-sidebar #main::after,
+  body.layout--single #main::before,
+  body.layout--single #main::after {
+    content: none;
+  }
+
+  body.fr-wide-sidebar #main > .sidebar,
+  body.layout--single #main > .sidebar {
+    grid-column: 1;
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body.fr-wide-sidebar #main > .archive,
+  body.fr-wide-sidebar #main > .page,
+  body.layout--single #main > .page,
+  body.layout--single #main > .page__related {
+    grid-column: 2;
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  body.layout--single #main > .page:first-child,
+  body.layout--single #main > .page:first-child ~ .page__related {
+    grid-column: 1 / -1;
+  }
+
+  body.fr-wide-full #main > .archive,
+  body.fr-wide-full #main > .page {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  body.fr-wide-full #main .grid__wrapper {
+    width: 100%;
+    margin-inline-end: 0;
+  }
+}
+
+/* Homepage sections share one calm rhythm and the site content measure. */
+.home-page .splash,
+.home-page .page__content {
+  width: 100%;
+}
+
+.home-page .feature__wrapper,
+.home-page .home-latest {
+  display: flow-root;
+}
+
+.home-page .feature__item-teaser img,
+.home-page .archive__item-teaser img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+}
+
+/* Single articles: wider FaceReader-style column with reliable images. */
+.layout--single .page__inner-wrap {
+  margin-top: 1.25rem;
+}
+
+.layout--single .page__content {
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.layout--single .page__content > p {
+  text-indent: 2em;
+}
+
+.layout--single .page__content > p:has(> img:only-child),
+.layout--single .page__content center {
+  text-indent: 0;
+}
+
+.page__content img {
+  display: block;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 1.25rem auto;
+}
+
+.page__content center img {
+  margin-bottom: 0.35rem;
+}
+
+/* Accessible, collapsible tag directory. */
+.tag-directory__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tag-directory__heading h2,
+.tag-directory__eyebrow {
+  margin: 0;
+}
+
+.tag-directory__eyebrow,
+.tag-directory__heading > span {
+  color: $muted-text-color;
+  font-size: $type-size-6;
+}
+
+.tag-groups {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.tag-group {
+  overflow: clip;
+  border: 1px solid $border-color;
+  border-radius: calc(#{$border-radius} * 1.5);
+  background: $background-color;
+}
+
+.tag-group summary {
+  position: relative;
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.9rem;
+  color: $text-color;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.tag-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.tag-group summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.tag-group[open] summary::after {
+  content: "−";
+}
+
+.tag-group summary small {
+  margin-inline-start: auto;
+  color: $muted-text-color;
+  font-weight: 400;
+}
+
+.tag-group .tag-directory__items {
+  margin: 0;
+  padding: 0.25rem 0.9rem 1rem;
+  border-top: 1px solid $border-color;
+}
+
+/* Numbered pagination and previous/next article navigation. */
+.pagination ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pagination li {
+  float: none;
+  margin-inline-start: 0;
+}
+
+.pagination li a,
+.pagination li .pagination__item {
+  min-width: 2.5rem;
+  border-radius: $border-radius;
+}
+
+.layout--single .page__inner-wrap > .pagination {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.layout--single .pagination--pager,
+.layout--single .pagination--pager:first-child,
+.layout--single .pagination--pager:last-child {
+  float: none;
+  width: 100%;
+  margin: 0;
+  border-radius: $border-radius;
+}
+
+/* Search UI: use the site container and neutralize conflicting CDN defaults. */
+.search-content .algolia-page,
+.layout--search .algolia-page {
+  width: 100%;
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.algolia-searchbox .ais-SearchBox-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.algolia-searchbox .ais-SearchBox-input,
+.local-search .search-input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.7rem 5.5rem 0.7rem 1rem;
+  border: 1px solid $border-color;
+  border-radius: calc(#{$border-radius} * 2);
+  color: $text-color;
+  background: $background-color;
+  box-shadow: none;
+}
+
+.algolia-searchbox .ais-SearchBox-submit,
+.algolia-searchbox .ais-SearchBox-reset {
+  position: absolute;
+  top: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.55rem;
+  border: 0;
+  color: $primary-color;
+  background: transparent;
+  transform: translateY(-50%);
+}
+
+.algolia-searchbox .ais-SearchBox-submit {
+  inset-inline-end: 2.65rem;
+}
+
+.algolia-searchbox .ais-SearchBox-reset {
+  inset-inline-end: 0.4rem;
+}
+
+.algolia-hits .ais-Hits-list,
+.algolia-pagination .ais-Pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.algolia-hits .ais-Hits-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.algolia-hits .ais-Hits-item {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.algolia-pagination .ais-Pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.algolia-pagination .ais-Pagination-link {
+  display: grid;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  place-items: center;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  color: $muted-text-color;
+  text-decoration: none;
+}
+
+.algolia-pagination .ais-Pagination-item--selected .ais-Pagination-link {
+  color: $background-color;
+  border-color: $primary-color;
+  background: $primary-color;
+}
+
+@media (max-width: $small) {
+  .layout--single .page__inner-wrap > .pagination {
+    grid-template-columns: 1fr;
+  }
+
+  .tag-directory__heading,
+  .tag-group summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tag-group summary small {
+    margin-inline-start: 0;
+  }
+
+  .tag-group summary::after {
+    position: absolute;
+    inset-inline-end: 1rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

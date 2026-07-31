@@ -22,6 +22,7 @@
     var queryInput = directory.querySelector("[data-tag-query]");
     var directoryStatus = directory.querySelector("[data-tag-directory-status]");
     var buttons = Array.prototype.slice.call(directory.querySelectorAll("[data-tag]"));
+    var groups = Array.prototype.slice.call(directory.querySelectorAll("[data-tag-group]"));
     var posts = Array.prototype.slice.call(document.querySelectorAll("[data-post-tags]"));
     var currentTag = document.querySelector("[data-current-tag]");
     var currentCount = document.querySelector("[data-current-tag-count]");
@@ -52,6 +53,14 @@
         button.hidden = !matches;
         if (matches) visible += 1;
       });
+      groups.forEach(function (group) {
+        var hasVisibleTag = Array.prototype.some.call(
+          group.querySelectorAll("[data-tag]"),
+          function (button) { return !button.hidden; }
+        );
+        group.hidden = !hasVisibleTag;
+        if (query && hasVisibleTag) group.open = true;
+      });
       directoryStatus.textContent = "显示 " + visible + "/" + buttons.length + " 个标签";
     }
 
@@ -68,6 +77,9 @@
         var active = button.dataset.tag === tag;
         button.classList.toggle("is-active", active);
         button.setAttribute("aria-pressed", String(active));
+        if (active && button.closest("[data-tag-group]")) {
+          button.closest("[data-tag-group]").open = true;
+        }
       });
 
       currentTag.textContent = tag || "全部";

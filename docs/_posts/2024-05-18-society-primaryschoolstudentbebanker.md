@@ -47,7 +47,7 @@ last_modified_at: 2024-05-18T19:25:52-05:00
 
 ### 这其中最典型的当属司马迁。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024%E5%8F%B8%E9%A9%AC%E8%BF%81.jpg" alt="司马迁" /><br>
+<center><img src="/assets/img/posts/2024%E5%8F%B8%E9%A9%AC%E8%BF%81.jpg" alt="司马迁" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -74,7 +74,7 @@ last_modified_at: 2024-05-18T19:25:52-05:00
 
 ### 另外一个典型的案例是特朗普。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024Trump_w1080_h720.jpeg" alt="唐纳德·特朗普" /><br>
+<center><img src="/assets/img/posts/2024Trump_w1080_h720.jpeg" alt="唐纳德·特朗普" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -99,7 +99,7 @@ last_modified_at: 2024-05-18T19:25:52-05:00
 
 &emsp;&emsp;**这种状态，如何能不感染孩子？因此很多时候孩子也像父亲一样出色。**
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024%E5%B7%B4%E8%8F%B2%E7%89%B9%E5%9C%A8%E9%98%85%E8%AF%BB.jpg" alt="专注的巴菲特" /><br>
+<center><img src="/assets/img/posts/2024%E5%B7%B4%E8%8F%B2%E7%89%B9%E5%9C%A8%E9%98%85%E8%AF%BB.jpg" alt="专注的巴菲特" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -114,7 +114,7 @@ last_modified_at: 2024-05-18T19:25:52-05:00
 
 ### 最知名的，是贝多芬。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024Ludwig-van-Beethoven.jpg" alt="贝多芬" /><br>
+<center><img src="/assets/img/posts/2024Ludwig-van-Beethoven.jpg" alt="贝多芬" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -133,7 +133,7 @@ last_modified_at: 2024-05-18T19:25:52-05:00
 
 ### 另外还有一个例子，就是日本演员香川照之。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024%E9%A6%99%E5%B7%9D%E7%85%A7%E4%B9%8B.jpg" alt="日本演员 香川照之" /><br>
+<center><img src="/assets/img/posts/2024%E9%A6%99%E5%B7%9D%E7%85%A7%E4%B9%8B.jpg" alt="日本演员 香川照之" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -170,7 +170,7 @@ last_modified_at: 2024-05-18T19:25:52-05:00
 
 ### 这里给大家讲一个故事：海鑫钢铁
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024%E6%B5%B7%E9%91%AB%E9%92%A2%E9%93%81-%E6%9D%8E%E5%85%86%E4%BC%9A.jpg" alt="海鑫钢铁 李兆会" /><br>
+<center><img src="/assets/img/posts/2024%E6%B5%B7%E9%91%AB%E9%92%A2%E9%93%81-%E6%9D%8E%E5%85%86%E4%BC%9A.jpg" alt="海鑫钢铁 李兆会" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -213,7 +213,7 @@ last_modified_at: 2024-05-18T19:25:52-05:00
 
 &emsp;&emsp;巴菲特的儿子彼得·巴菲特是音乐家。巴菲特并没有强迫儿子追随他的道路，从事金融和投资领域。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024%E5%BD%BC%E5%BE%97%E5%B7%B4%E8%8F%B2%E7%89%B9%E5%92%8C%E7%88%B6%E4%BA%B2.jpg" alt="彼得·巴菲特和父亲巴菲特" /><br>
+<center><img src="/assets/img/posts/2024%E5%BD%BC%E5%BE%97%E5%B7%B4%E8%8F%B2%E7%89%B9%E5%92%8C%E7%88%B6%E4%BA%B2.jpg" alt="彼得·巴菲特和父亲巴菲特" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

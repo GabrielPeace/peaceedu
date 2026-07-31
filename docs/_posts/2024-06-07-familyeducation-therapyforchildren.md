@@ -48,7 +48,7 @@ last_modified_at: 2024-06-07T19:25:52-05:00
 
 ## 孩子看心理医生的顾虑
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/page-header-image-unhappy01.jpg" alt="A Girl Who is Unhappy" /><br>
+<center><img src="/assets/img/posts/2024/page-header-image-unhappy01.jpg" alt="A Girl Who is Unhappy" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -89,7 +89,7 @@ last_modified_at: 2024-06-07T19:25:52-05:00
 
 &emsp;&emsp;但认识自我这个过程，并不容易，它是痛苦的。尤其是当我们对自我的探索达到一定深度的时候，遇到的很多问题我们自己无法解决，所以我们会把困扰和矛盾转向周围的世界，而且这个过程总是伴随着“同一性危机”。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/page-header-image-relax01.jpg" alt="Relaxing Time" /><br>
+<center><img src="/assets/img/posts/2024/page-header-image-relax01.jpg" alt="Relaxing Time" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -160,7 +160,7 @@ last_modified_at: 2024-06-07T19:25:52-05:00
 
 &emsp;&emsp;先尝试短期的目标，比如一次咨询，看看效果如何，这样孩子不会感觉有太大的压力。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/page-header-image-children01.jpg" alt="Children" /><br>
+<center><img src="/assets/img/posts/2024/page-header-image-children01.jpg" alt="Children" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -205,7 +205,7 @@ last_modified_at: 2024-06-07T19:25:52-05:00
 
 &emsp;&emsp;咨询师清楚地识别和维护自己的专业边界，确保在工作中保持专业性和道德准则，这能确保咨询过程的伦理性和有效性，保护来访者和咨询师双方的利益。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/page-header-image-group01.jpg" alt="Happy Girls" /><br>
+<center><img src="/assets/img/posts/2024/page-header-image-group01.jpg" alt="Happy Girls" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -244,7 +244,7 @@ last_modified_at: 2024-06-07T19:25:52-05:00
 
 &emsp;&emsp;这是第二重要的问题。
 
-<center><img src="https://fastly.jsdelivr.net/gh/GabrielPeace/img@main/2024/page-header-image-alone01.jpg" alt="A Girl Who is Alone" /><br>
+<center><img src="/assets/img/posts/2024/page-header-image-alone01.jpg" alt="A Girl Who is Alone" /><br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;

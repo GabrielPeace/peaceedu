@@ -159,7 +159,6 @@
   }
 
   ready(function () {
-    if (!document.querySelector(".page__content")) return;
     createProgressBar();
     createTools();
     updateProgress();

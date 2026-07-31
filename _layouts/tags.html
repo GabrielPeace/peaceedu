@@ -8,7 +8,13 @@ layout: archive
 {% assign sorted_tags = site.tags | sort %}
 
 <section class="tag-directory" data-tag-directory aria-labelledby="tag-directory-title">
-  <h2 id="tag-directory-title">标签目录</h2>
+  <div class="tag-directory__heading">
+    <div>
+      <p class="tag-directory__eyebrow">按主题探索</p>
+      <h2 id="tag-directory-title">标签目录</h2>
+    </div>
+    <span>{{ site.tags | size }} 个标签</span>
+  </div>
   <label for="tag-directory-query">搜索标签</label>
   <input
     id="tag-directory-query"
@@ -20,22 +26,42 @@ layout: archive
   >
   <p id="tag-directory-status" role="status" aria-live="polite" aria-atomic="true" data-tag-directory-status></p>
 
-  <div class="tag-directory__items">
-    {% for tag in sorted_tags %}
-      {% assign tag_name = tag[0] %}
-      {% assign tag_posts = tag[1] %}
-      <button
-        type="button"
-        class="tag-directory__item"
-        data-tag="{{ tag_name | escape }}"
-        data-tag-slug="{{ tag_name | slugify | escape }}"
-        data-count="{{ tag_posts | size }}"
-        aria-pressed="false"
-      >
-        <span>{{ tag_name }}</span>
-        <small>{{ tag_posts | size }}</small>
-      </button>
-    {% endfor %}
+  <div class="tag-groups">
+    <details class="tag-group" open data-tag-group>
+      <summary>
+        <span>常用标签</span>
+        <small>包含两篇及以上文章</small>
+      </summary>
+      <div class="tag-directory__items" data-tag-group-panel>
+        {% for tag in sorted_tags %}
+          {% assign tag_name = tag[0] %}
+          {% assign tag_posts = tag[1] %}
+          {% if tag_posts.size > 1 %}
+            <button type="button" class="tag-directory__item" data-tag="{{ tag_name | escape }}" data-tag-slug="{{ tag_name | slugify | escape }}" data-count="{{ tag_posts | size }}" aria-pressed="false">
+              <span>{{ tag_name }}</span><small>{{ tag_posts | size }}</small>
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </details>
+
+    <details class="tag-group" data-tag-group>
+      <summary>
+        <span>更多标签</span>
+        <small>包含一篇文章</small>
+      </summary>
+      <div class="tag-directory__items" data-tag-group-panel>
+        {% for tag in sorted_tags %}
+          {% assign tag_name = tag[0] %}
+          {% assign tag_posts = tag[1] %}
+          {% if tag_posts.size == 1 %}
+            <button type="button" class="tag-directory__item" data-tag="{{ tag_name | escape }}" data-tag-slug="{{ tag_name | slugify | escape }}" data-count="{{ tag_posts | size }}" aria-pressed="false">
+              <span>{{ tag_name }}</span><small>{{ tag_posts | size }}</small>
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </details>
   </div>
 </section>
 
